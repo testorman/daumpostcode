@@ -13,8 +13,6 @@ export default class StartScreen extends Component {
   // appActions, deviceInfo
 
   onClick_elButton = (ev) => {
-    // Go to screen 'step2'
-    this.props.appActions.goToScreen('step2', { transitionId: 'fadeIn' });
   
   }
   
