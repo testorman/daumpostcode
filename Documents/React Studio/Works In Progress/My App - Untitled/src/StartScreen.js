@@ -33,10 +33,7 @@ export default class StartScreen extends Component {
         pointerEvents: 'none',
      };
     const style_reactstudio_layoutdemo_headerpic = {
-        backgroundImage: 'url('+img_elReactstudio_layoutdemo_headerpic+')',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: '50% 50%',
-        backgroundSize: 'cover',
+        height: 'auto',
         pointerEvents: 'none',
      };
     
@@ -51,7 +48,7 @@ export default class StartScreen extends Component {
         </div>
         <div className="screenFgContainer">
           <div className="foreground">
-            <div className='containerMinHeight elReactstudio_layoutdemo_headerpic' style={style_reactstudio_layoutdemo_headerpic} />
+            <img className='containerMinHeight elReactstudio_layoutdemo_headerpic' style={style_reactstudio_layoutdemo_headerpic} src={img_elReactstudio_layoutdemo_headerpic} alt=""  />
           </div>
         </div>
       </Container>
