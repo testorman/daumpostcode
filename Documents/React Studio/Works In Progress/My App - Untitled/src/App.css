@@ -253,6 +253,27 @@
   width: 100%;
 }
 
+.Step2Screen {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+  .Step2Screen > .layoutFlow > .elText {
+    overflow: hidden;
+    position: relative;
+    margin-top: 91px;
+    width: 238px;
+    margin-left: 182px;
+  }
+  .Step2Screen > .layoutFlow > .elText > * { 
+  width: 238px;
+  height: 26px;
+  }
+  
+
 .StartScreen {
   max-width: 1280px;
   margin-left: auto;
@@ -302,25 +323,4 @@
     width: 128px;
     height: 69px;
   }
-
-.Step2Screen {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-  .Step2Screen > .layoutFlow > .elText {
-    overflow: hidden;
-    position: relative;
-    margin-top: 91px;
-    width: 238px;
-    margin-left: 182px;
-  }
-  .Step2Screen > .layoutFlow > .elText > * { 
-  width: 238px;
-  height: 26px;
-  }
-  
 
