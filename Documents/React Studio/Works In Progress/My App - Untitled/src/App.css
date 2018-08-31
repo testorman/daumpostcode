@@ -271,20 +271,6 @@
   }
 
 
-  .StartScreen > .layoutFlow > .state0_elImage624414 {
-    position: relative;
-    margin-top: 880px;
-    margin-left: 161px;
-    margin-right: 158px;
-    width: calc(100.0% - 319px);
-  }
-  .StartScreen > .layoutFlow > .state0_elImage624414 > * { 
-    width: 100%;
-  height: 406px;
-  }
-  
-
-
   .StartScreen > .screenFgContainer > .foreground > .state0_elReactstudio_layoutdemo_headerpic {
     position: absolute;
     left: 0px;
@@ -294,26 +280,15 @@
     height: 100%;
   }
 
-.StartScreen {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-
-
-  .StartScreen > .layoutFlow > .state1_elImage624414 {
-    position: relative;
-    margin-top: 880px;
-    margin-left: 161px;
-    margin-right: 158px;
-    width: calc(100.0% - 319px);
+  .StartScreen > .screenFgContainer > .foreground > .state0_elImage624414 {
+    position: absolute;
+    left: 165px;
+    right: 155px;
+    top: 198px;
+    width: calc(100% - 165px + 155px);
+    height: 406px;
   }
-  .StartScreen > .layoutFlow > .state1_elImage624414 > * { 
-    width: 100%;
-  height: 406px;
-  }
-  
 
 .StartScreen {
   max-width: 1280px;
@@ -323,16 +298,29 @@
 
 
 
-  .StartScreen > .layoutFlow > .state2_elImage624414 {
-    position: relative;
-    margin-top: 880px;
-    margin-left: 161px;
-    margin-right: 158px;
-    width: calc(100.0% - 319px);
+  .StartScreen > .screenFgContainer > .foreground > .state1_elImage624414 {
+    position: absolute;
+    left: 165px;
+    right: 155px;
+    top: 198px;
+    width: calc(100% - 165px + 155px);
+    height: 406px;
   }
-  .StartScreen > .layoutFlow > .state2_elImage624414 > * { 
-    width: 100%;
-  height: 406px;
+
+.StartScreen {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+  .StartScreen > .screenFgContainer > .foreground > .state2_elImage624414 {
+    position: absolute;
+    left: 165px;
+    right: 155px;
+    top: 198px;
+    width: calc(100% - 165px + 155px);
+    height: 406px;
   }
-  
 

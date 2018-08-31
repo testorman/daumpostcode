@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import img_state0_elImage624414 from './images/StartScreen_state0_elImage624414_624414.jpg';
 import img_state0_elReactstudio_layoutdemo_headerpic from './images/StartScreen_state0_elReactstudio_layoutdemo_headerpic_360944.jpg';
+import img_state0_elImage624414 from './images/StartScreen_state0_elImage624414_624414.jpg';
 import img_state1_elImage624414 from './images/StartScreen_state0_elImage624414_624414.jpg';
 import img_state2_elImage624414 from './images/StartScreen_state0_elImage624414_624414.jpg';
 
@@ -37,17 +37,15 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
+    const style_reactstudio_layoutdemo_headerpic = {
+        height: 'auto',
+        pointerEvents: 'none',
+     };
     const style_image = {
         backgroundImage: 'url('+img_state0_elImage624414+')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 50%',
         backgroundSize: 'cover',
-     };
-    const style_image_outer = {
-        pointerEvents: 'none',
-     };
-    const style_reactstudio_layoutdemo_headerpic = {
-        height: 'auto',
         pointerEvents: 'none',
      };
     
@@ -60,16 +58,10 @@ export default class StartScreen extends Component {
           </div>
           
         </div>
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='state0_elImage624414' style={style_image_outer}>
-            <div style={style_image} />
-          
-          </div>
-          
-        </div>
         <div className="screenFgContainer">
           <div className="foreground">
             <img className='containerMinHeight state0_elReactstudio_layoutdemo_headerpic' style={style_reactstudio_layoutdemo_headerpic} src={img_state0_elReactstudio_layoutdemo_headerpic} alt=""  />
+            <div className='state0_elImage624414' style={style_image} />
           </div>
         </div>
       </Container>
@@ -96,19 +88,15 @@ export default class StartScreen extends Component {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 50%',
         backgroundSize: 'cover',
-     };
-    const style_image_outer = {
         pointerEvents: 'none',
      };
     
     return (
       <Container fluid={true} className="AppScreen StartScreen" style={baseStyle}>
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='state1_elImage624414' style={style_image_outer}>
-            <div style={style_image} />
-          
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <div className='state1_elImage624414' style={style_image} />
           </div>
-          
         </div>
       </Container>
     )
@@ -134,19 +122,15 @@ export default class StartScreen extends Component {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 50%',
         backgroundSize: 'cover',
-     };
-    const style_image_outer = {
         pointerEvents: 'none',
      };
     
     return (
       <Container fluid={true} className="AppScreen StartScreen" style={baseStyle}>
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='state2_elImage624414' style={style_image_outer}>
-            <div style={style_image} />
-          
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <div className='state2_elImage624414' style={style_image} />
           </div>
-          
         </div>
       </Container>
     )
