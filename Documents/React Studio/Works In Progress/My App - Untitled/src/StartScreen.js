@@ -12,6 +12,13 @@ export default class StartScreen extends Component {
   // Properties used by this component:
   // appActions, deviceInfo
 
+  onClick_elButton = (ev) => {
+    // Go to screen 'step2'
+    this.props.appActions.goToScreen('step2', { transitionId: 'fadeIn' });
+  
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -44,7 +51,7 @@ export default class StartScreen extends Component {
     const style_button = {
         display: 'block',
         textAlign: 'center',
-        pointerEvents: 'none',
+        cursor: 'pointer',
      };
     
     return (
@@ -62,7 +69,7 @@ export default class StartScreen extends Component {
             <div className='embeddedContent elEmbed'>
               <div dangerouslySetInnerHTML={{__html: htmlContent_embed}}></div>
             </div>
-            <Button className='actionFont elButton' style={style_button}  color="accent" >
+            <Button className='actionFont elButton' style={style_button}  color="accent" onClick={this.onClick_elButton} >
               {this.props.locStrings.start_button_609221}
             </Button>
           </div>
