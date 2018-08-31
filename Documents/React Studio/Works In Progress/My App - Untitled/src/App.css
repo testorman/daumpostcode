@@ -283,11 +283,11 @@
 
   .StartScreen > .screenFgContainer > .foreground > .state0_elImage624414 {
     position: absolute;
-    left: 165px;
-    right: 155px;
-    top: 198px;
-    width: calc(100% - 165px + 155px);
-    height: 406px;
+    left: 0px;
+    right: 0px;
+    top: 72px;
+    width: 100%;
+    height: 576px;
   }
 
 .StartScreen {
@@ -300,11 +300,11 @@
 
   .StartScreen > .screenFgContainer > .foreground > .state1_elImage624414 {
     position: absolute;
-    left: 165px;
-    right: 155px;
-    top: 198px;
-    width: calc(100% - 165px + 155px);
-    height: 406px;
+    left: 0px;
+    right: 0px;
+    top: 72px;
+    width: 100%;
+    height: 576px;
   }
 
 .StartScreen {
@@ -317,10 +317,10 @@
 
   .StartScreen > .screenFgContainer > .foreground > .state2_elImage624414 {
     position: absolute;
-    left: 165px;
-    right: 155px;
-    top: 198px;
-    width: calc(100% - 165px + 155px);
-    height: 406px;
+    left: 0px;
+    right: 0px;
+    top: 72px;
+    width: 100%;
+    height: 576px;
   }
 
