@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import img_elReactstudio_layoutdemo_headerpic from './images/StartScreen_elReactstudio_layoutdemo_headerpic_360944.jpg';
-import img_elImage from './images/StartScreen_elImage_624414.jpg';
 
 // UI framework component imports
+import Button from 'muicss/lib/react/button';
 import Container from 'muicss/lib/react/container';
 
 
@@ -37,20 +37,13 @@ export default class StartScreen extends Component {
         height: 'auto',
         pointerEvents: 'none',
      };
-    const style_card = {
-        width: '100%',
-        height: '100%',
-     };
-    const style_card_outer = {
-        backgroundColor: 'white',
-        boxShadow: '0.0px 5.3px 37px rgba(0, 0, 0, 0.4500)',
-        pointerEvents: 'none',
-     };
-    const style_image = {
-        backgroundImage: 'url('+img_elImage+')',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: '50% 50%',
-        backgroundSize: 'contain',
+    // Embedded HTML content for element 'embed'
+    const htmlContent_embed = "";
+    
+    
+    const style_button = {
+        display: 'block',
+        textAlign: 'center',
         pointerEvents: 'none',
      };
     
@@ -66,12 +59,12 @@ export default class StartScreen extends Component {
         <div className="screenFgContainer">
           <div className="foreground">
             <img className='containerMinHeight elReactstudio_layoutdemo_headerpic' style={style_reactstudio_layoutdemo_headerpic} src={img_elReactstudio_layoutdemo_headerpic} alt=""  />
-            <div className='cardBg elCard' style={style_card_outer}>
-              <div style={style_card} />
-            
+            <div className='embeddedContent elEmbed'>
+              <div dangerouslySetInnerHTML={{__html: htmlContent_embed}}></div>
             </div>
-            
-            <div className='elImage' style={style_image} />
+            <Button className='actionFont elButton' style={style_button}  color="accent" >
+              {this.props.locStrings.start_button_609221}
+            </Button>
           </div>
         </div>
       </Container>

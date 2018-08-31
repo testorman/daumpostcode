@@ -281,21 +281,27 @@
   }
 
 
-  .StartScreen > .screenFgContainer > .foreground > .elCard {
+  .StartScreen > .screenFgContainer > .foreground > .elEmbed {
     position: absolute;
-    left: 977px;
-    top: 294px;
+    left: 880px;
+    top: 435px;
     width: 212px;
-    height: 159px;
+    height: 212px;
   }
 
+.StartScreen .elButton {
+  border: 0.0px solid transparent;
+}
 
-  .StartScreen > .screenFgContainer > .foreground > .elImage {
+
+
+  .StartScreen > .screenFgContainer > .foreground > .elButton {
+    line-height: 69px;
     position: absolute;
-    left: 0px;
+    left: 45.0%;
     right: 0px;
-    top: 72px;
+    top: 269px;
     width: 100%;
-    height: 576px;
+    height: 69px;
   }
 

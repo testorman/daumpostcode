@@ -12,6 +12,11 @@ export default class DataSheet_localizationSheet extends DataSheetBase {
     let key = 1;
     // eslint-disable-next-line no-unused-vars
     let item;
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "start_button_609221";
+    item['en'] = "New button";
   }
 
   getStringsByLanguage = () => {
