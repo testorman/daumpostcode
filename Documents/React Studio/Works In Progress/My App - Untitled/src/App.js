@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
-import Step2Screen from './Step2Screen.js';
 import StartScreen from './StartScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 
@@ -174,8 +173,6 @@ export default class App extends Component {
       switch (screenId) {
         default:
           return null;
-        case 'step2':
-          return (<Step2Screen {...screenProps} />)
         case 'start':
           return (<StartScreen {...screenProps} />)
       }
