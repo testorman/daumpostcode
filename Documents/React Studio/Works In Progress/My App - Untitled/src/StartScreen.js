@@ -9,6 +9,23 @@ export default class StartScreen extends Component {
   // Properties used by this component:
   // appActions, deviceInfo, ds_username
 
+  onClick_elComp = (ev) => {
+    this.sendData_comp_to_listData1();
+  
+  }
+  
+  
+  sendData_comp_to_listData1 = () => {
+    const dataSheet = this.props.appActions.getDataSheet('listData1');
+  
+    let row = this.props.dataSheetRow || {
+    };
+    row = { ...row, 
+    };
+    this.props.appActions.addToDataSheet('listData1', row);
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -56,6 +73,9 @@ export default class StartScreen extends Component {
     let listComps_list = {};
     items_list = items_list.concat(this.props.appActions.getDataSheet('listData1').items);
     
+    const style_comp_outer = {
+        cursor: 'pointer',
+     };
     
     return (
       <div className="AppScreen StartScreen" style={baseStyle}>
@@ -84,8 +104,8 @@ export default class StartScreen extends Component {
           
           </div>
           
-          <div className='hasNestedComps elComp'>
-            <div>
+          <div className='hasNestedComps elComp' style={style_comp_outer}>
+            <div onClick={this.onClick_elComp} >
               <Comp1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           

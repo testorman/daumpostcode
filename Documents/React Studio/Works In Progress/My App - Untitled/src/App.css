@@ -305,26 +305,26 @@
   }
 
 
-  .Comp1 .elField {
+  .Comp1 .elUsername {
     position: relative;
     margin-top: 0px;
     width: 226px;
     margin-left: 0px;
   }
-  .Comp1 .elField > * { 
+  .Comp1 .elUsername > * { 
   width: 226px;
   height: 34px;
   }
   
 
 
-  .Comp1 .elField2 {
+  .Comp1 .elComment {
     position: relative;
     margin-top: 12px;
     width: 226px;
     margin-left: 0px;
   }
-  .Comp1 .elField2 > * { 
+  .Comp1 .elComment > * { 
   width: 226px;
   height: 34px;
   }
