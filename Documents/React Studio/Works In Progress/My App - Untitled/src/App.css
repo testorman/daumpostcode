@@ -253,6 +253,48 @@
   width: 100%;
 }
 
+/* This component has a fixed-size layout */
+  .ListItem1 {
+    min-height: 62px;
+    width: 100%; /* This component was designed using a width of 245px */
+  }
+  .ListItem1 > .background > .containerMinHeight {
+    min-height: 62px;
+  }
+
+
+  .ListItem1 .elText {
+    position: relative;
+    margin-top: 0px;
+    width: 238px;
+    margin-left: 0px;
+  }
+  .ListItem1 .elText > * { 
+  width: 238px;
+  }
+  
+
+
+  .ListItem1 .elText2 {
+    position: relative;
+    margin-top: 22px;
+    width: 238px;
+    margin-left: 0px;
+  }
+  .ListItem1 .elText2 > * { 
+  width: 238px;
+  }
+  
+
+
+  .ListItem1 .elLine {
+    position: absolute;
+    left: 1px;
+    top: 31px;
+    width: 242px;
+    height: 2px;
+  }
+
 
 /* Narrowest size for this element's responsive layout */
   .StartScreen > .background > .elBackground {
@@ -291,207 +333,42 @@
   }
 }
 
+  .StartScreen .elList li {
+    margin-bottom: 9px;
+  }
 
-/* Narrowest size for this element's responsive layout */
-  .StartScreen > .layoutFlow > .elText {
-    position: relative;
-    margin-top: 40px;
-    width: 238px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText > * { 
-  width: 238px;
-  }
-  
-@media (min-width: 568px) {
-  .StartScreen > .layoutFlow > .elText {
-    position: relative;
-    margin-top: 40px;
-    width: 238px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText > * { 
-  width: 238px;
-  }
-  
-}
-@media (min-width: 768px) {
-  .StartScreen > .layoutFlow > .elText {
-    position: relative;
-    margin-top: 40px;
-    width: 236px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText > * { 
-  width: 236px;
-  }
-  
-}
-@media (min-width: 1024px) {
-  .StartScreen > .layoutFlow > .elText {
-    position: relative;
-    margin-top: 40px;
-    width: 236px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText > * { 
-  width: 236px;
-  }
-  
-}
 
 
 /* Narrowest size for this element's responsive layout */
-  .StartScreen > .layoutFlow > .elField {
-    position: relative;
-    margin-top: 16px;
-    width: 226px;
-    margin-left: 12px;
+  .StartScreen > .screenFgContainer > .foreground > .elList {
+    position: absolute;
+    left: 27px;
+    top: 62px;
+    width: 245px;
+    height: 340px;
   }
-  .StartScreen > .layoutFlow > .elField > * { 
-  width: 226px;
-  height: 21px;
-  }
-  
 @media (min-width: 568px) {
-  .StartScreen > .layoutFlow > .elField {
-    position: relative;
-    margin-top: 16px;
-    width: 226px;
-    margin-left: 12px;
+  .StartScreen > .screenFgContainer > .foreground > .elList {
+    left: 27px;
+    top: 62px;
+    width: 245px;
+    height: 340px;
   }
-  .StartScreen > .layoutFlow > .elField > * { 
-  width: 226px;
-  height: 21px;
-  }
-  
 }
 @media (min-width: 768px) {
-  .StartScreen > .layoutFlow > .elField {
-    position: relative;
-    margin-top: 15px;
-    width: 225px;
-    margin-left: 12px;
+  .StartScreen > .screenFgContainer > .foreground > .elList {
+    left: 27px;
+    top: 62px;
+    width: 244px;
+    height: 338px;
   }
-  .StartScreen > .layoutFlow > .elField > * { 
-  width: 225px;
-  height: 21px;
-  }
-  
 }
 @media (min-width: 1024px) {
-  .StartScreen > .layoutFlow > .elField {
-    position: relative;
-    margin-top: 15px;
-    width: 225px;
-    margin-left: 12px;
+  .StartScreen > .screenFgContainer > .foreground > .elList {
+    left: 27px;
+    top: 62px;
+    width: 244px;
+    height: 338px;
   }
-  .StartScreen > .layoutFlow > .elField > * { 
-  width: 225px;
-  height: 21px;
-  }
-  
-}
-
-
-/* Narrowest size for this element's responsive layout */
-  .StartScreen > .layoutFlow > .elText2 {
-    position: relative;
-    margin-top: 24px;
-    width: 238px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText2 > * { 
-  width: 238px;
-  }
-  
-@media (min-width: 568px) {
-  .StartScreen > .layoutFlow > .elText2 {
-    position: relative;
-    margin-top: 24px;
-    width: 238px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText2 > * { 
-  width: 238px;
-  }
-  
-}
-@media (min-width: 768px) {
-  .StartScreen > .layoutFlow > .elText2 {
-    position: relative;
-    margin-top: 24px;
-    width: 236px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText2 > * { 
-  width: 236px;
-  }
-  
-}
-@media (min-width: 1024px) {
-  .StartScreen > .layoutFlow > .elText2 {
-    position: relative;
-    margin-top: 24px;
-    width: 236px;
-    margin-left: 12px;
-  }
-  .StartScreen > .layoutFlow > .elText2 > * { 
-  width: 236px;
-  }
-  
-}
-
-
-/* Narrowest size for this element's responsive layout */
-  .StartScreen > .layoutFlow > .elField2 {
-    position: relative;
-    margin-top: 17px;
-    width: 226px;
-    margin-left: 13px;
-  }
-  .StartScreen > .layoutFlow > .elField2 > * { 
-  width: 226px;
-  height: 34px;
-  }
-  
-@media (min-width: 568px) {
-  .StartScreen > .layoutFlow > .elField2 {
-    position: relative;
-    margin-top: 17px;
-    width: 226px;
-    margin-left: 13px;
-  }
-  .StartScreen > .layoutFlow > .elField2 > * { 
-  width: 226px;
-  height: 34px;
-  }
-  
-}
-@media (min-width: 768px) {
-  .StartScreen > .layoutFlow > .elField2 {
-    position: relative;
-    margin-top: 17px;
-    width: 225px;
-    margin-left: 13px;
-  }
-  .StartScreen > .layoutFlow > .elField2 > * { 
-  width: 225px;
-  height: 34px;
-  }
-  
-}
-@media (min-width: 1024px) {
-  .StartScreen > .layoutFlow > .elField2 {
-    position: relative;
-    margin-top: 17px;
-    width: 225px;
-    margin-left: 13px;
-  }
-  .StartScreen > .layoutFlow > .elField2 > * { 
-  width: 225px;
-  height: 34px;
-  }
-  
 }
 

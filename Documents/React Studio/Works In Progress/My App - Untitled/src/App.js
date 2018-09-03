@@ -3,6 +3,7 @@ import LocalizedStrings from 'react-localization';
 import './App.css';
 import StartScreen from './StartScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
+import DataSheet_listData1 from './DataSheet_listData1.js';
 
 
 export default class App extends Component {
@@ -11,6 +12,7 @@ export default class App extends Component {
 
     this.dataSheets = {};
     this.dataSheets['localizationSheet'] = new DataSheet_localizationSheet('localizationSheet', this.dataSheetDidUpdate);
+    this.dataSheets['listData1'] = new DataSheet_listData1('listData1', this.dataSheetDidUpdate);
 
     this.dataSlots = {};
     this.dataSlots['ds_activeLang'] = "en";

@@ -15,18 +15,43 @@ export default class DataSheet_localizationSheet extends DataSheetBase {
     
     item = {};
     this.items.push(item);
-    item['key'] = "start_text_519856";
-    item['en'] = "name";
+    item['key'] = "start_text_59844";
+    item['en'] = "New text. Double-click to edit";
     
     item = {};
     this.items.push(item);
-    item['key'] = "start_text_173522";
-    item['en'] = "name";
+    item['key'] = "start_text2_37425";
+    item['en'] = "New text. Double-click to edit";
     
     item = {};
     this.items.push(item);
-    item['key'] = "start_text2_972884";
-    item['en'] = "comment";
+    item['key'] = "listitem1_text_96755";
+    item['en'] = "New text. Double-click to edit";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "listitem1_text2_32621";
+    item['en'] = "New text. Double-click to edit";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "start_text_550823";
+    item['en'] = "New text. Double-click to edit";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "start_text2_511547";
+    item['en'] = "New text. Double-click to edit";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "listitem2_text_863048";
+    item['en'] = "New text. Double-click to edit";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "listitem2_text2_298344";
+    item['en'] = "New text. Double-click to edit";
   }
 
   getStringsByLanguage = () => {

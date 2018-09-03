@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListItem1 from './ListItem1';
+
+// UI framework component imports
+import Appbar from 'muicss/lib/react/appbar';
 
 
 export default class StartScreen extends Component {
@@ -7,23 +11,6 @@ export default class StartScreen extends Component {
   // Properties used by this component:
   // appActions, deviceInfo
 
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      field: '',
-      field2: '',
-    };
-  }
-
-  textInputChanged_field = (event) => {
-    this.setState({field: event.target.value});
-  }
-  
-  textInputChanged_field2 = (event) => {
-    this.setState({field2: event.target.value});
-  }
-  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -37,6 +24,7 @@ export default class StartScreen extends Component {
       layoutFlowStyle.overflow = 'hidden';
     }
     
+    const dataSheet_listData1 = this.props.dataSheets['listData1'];
     const style_background = {
         width: '100%',
         height: '100%',
@@ -45,32 +33,14 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
-    const style_text = {
-        color: 'rgba(0, 0, 0, 0.8500)',
-        textAlign: 'left',
+    const style_list = {
+        overflow: 'hidden',  // This element is not in scroll flow
      };
-    const style_text_outer = {
-        pointerEvents: 'none',
-     };
-    const style_field = {
-        display: 'block',
-        backgroundColor: 'white',
-        paddingLeft: '1rem',
-        boxSizing: 'border-box', // ensures padding won't expand element's outer size
-     };
-    const style_text2 = {
-        color: 'rgba(0, 0, 0, 0.8500)',
-        textAlign: 'left',
-     };
-    const style_text2_outer = {
-        pointerEvents: 'none',
-     };
-    const style_field2 = {
-        display: 'block',
-        backgroundColor: 'white',
-        paddingLeft: '1rem',
-        boxSizing: 'border-box', // ensures padding won't expand element's outer size
-     };
+    // Source items and any special components used for list/grid element 'list'.
+    let items_list = [];
+    let listComps_list = {};
+    items_list = items_list.concat(this.props.appActions.getDataSheet('listData1').items);
+    
     
     return (
       <div className="AppScreen StartScreen" style={baseStyle}>
@@ -81,31 +51,19 @@ export default class StartScreen extends Component {
           </div>
           
         </div>
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='baseFont elText' style={style_text_outer}>
-            <div style={style_text}>
-              <div>{this.props.locStrings.start_text_519856}</div>
-            </div>
-          
+        <Appbar className="navBar">
+          <div className="title">Start</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
+        </Appbar>
+        
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <ul className='hasNestedComps elList' style={style_list}>
+              {items_list.map((row, index) => {
+                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <ListItem1 dataSheetId={'listData1'} dataSheetRow={row} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
+                return (<li key={row.key}>{itemComp}</li>)
+              })}
+            </ul>
           </div>
-          
-          <div className='baseFont elField'>
-            <input style={style_field} type="text" placeholder={this.props.locStrings.start_field_931391} onChange={this.textInputChanged_field} defaultValue={this.state.field}  />
-          
-          </div>
-          
-          <div className='baseFont elText2' style={style_text2_outer}>
-            <div style={style_text2}>
-              <div>{this.props.locStrings.start_text2_972884}</div>
-            </div>
-          
-          </div>
-          
-          <div className='baseFont elField2'>
-            <input style={style_field2} type="text" placeholder={this.props.locStrings.start_field2_774955} onChange={this.textInputChanged_field2} defaultValue={this.state.field2}  />
-          
-          </div>
-          
         </div>
       </div>
     )
