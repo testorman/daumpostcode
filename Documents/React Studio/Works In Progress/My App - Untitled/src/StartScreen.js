@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import ListItem1 from './ListItem1';
-import Comp1 from './Comp1';
+import Grid from './Grid';
 
 
 export default class StartScreen extends Component {
 
   // Properties used by this component:
-  // appActions, deviceInfo, ds_username
+  // appActions, deviceInfo
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -22,7 +21,7 @@ export default class StartScreen extends Component {
       layoutFlowStyle.overflow = 'hidden';
     }
     
-    const dataSheet_listData1 = this.props.dataSheets['listData1'];
+    const dataSheet_localizationSheet = this.props.dataSheets['localizationSheet'];
     const style_background = {
         width: '100%',
         height: '100%',
@@ -31,30 +30,13 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
-    let transformPropValue_text = (input) => {
-      // This function modifies the value for property 'text'.
-      // There is a variable named 'input' that provides the property value.
-      return "Hi "+input+"!";;
-    }
-    const style_text = {
-        fontSize: 32.3,
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
-        fontWeight: 'bold',
-        color: 'rgba(0, 0, 0, 0.8500)',
-        textAlign: 'left',
-     };
-    const value_text = transformPropValue_text(this.props.ds_username);
-    
-    const style_text_outer = {
-        pointerEvents: 'none',
-     };
     const style_list = {
         height: 'auto',  // This element is in scroll flow
      };
     // Source items and any special components used for list/grid element 'list'.
     let items_list = [];
     let listComps_list = {};
-    items_list = items_list.concat(this.props.appActions.getDataSheet('listData1').items);
+    items_list = items_list.concat(this.props.appActions.getDataSheet('localizationSheet').items);
     
     
     return (
@@ -67,26 +49,17 @@ export default class StartScreen extends Component {
           
         </div>
         <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='elText' style={style_text_outer}>
-            <div style={style_text}>
-              <div>{value_text !== undefined ? value_text : (<span className="propValueMissing">{this.props.locStrings.start_text_645355}</span>)}</div>
-            </div>
-          
-          </div>
-          
           <div className='hasNestedComps elList'>
-            <ul style={style_list}>
+            <div style={style_list}>
               {items_list.map((row, index) => {
-                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <ListItem1 dataSheetId={'listData1'} dataSheetRow={row} username={row.username} text={row.text} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
-                return (<li key={row.key}>{itemComp}</li>)
+                let itemClasses = `gridItem cols1_${index % 1} cols3_${index % 3} cols5_${index % 5} cols4_${index % 4}`;
+                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <Grid dataSheetId={'localizationSheet'} dataSheetRow={row} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
+                return (
+                  <div className={itemClasses} key={row.key}>
+                    {itemComp}
+                  </div>
+                )
               })}
-            </ul>
-          
-          </div>
-          
-          <div className='hasNestedComps elComp'>
-            <div>
-              <Comp1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           
           </div>

@@ -15,68 +15,18 @@ export default class DataSheet_localizationSheet extends DataSheetBase {
     
     item = {};
     this.items.push(item);
-    item['key'] = "start_text_59844";
+    item['key'] = "component1_text_839157";
     item['en'] = "New text. Double-click to edit";
     
     item = {};
     this.items.push(item);
-    item['key'] = "start_text2_37425";
+    item['key'] = "component1_text2_835721";
     item['en'] = "New text. Double-click to edit";
     
     item = {};
     this.items.push(item);
-    item['key'] = "listitem1_text_96755";
+    item['key'] = "component1_text3_966792";
     item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "listitem1_text2_32621";
-    item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "start_text_550823";
-    item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "start_text2_511547";
-    item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "listitem2_text_863048";
-    item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "listitem2_text2_298344";
-    item['en'] = "New text. Double-click to edit";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "start_button_1013010";
-    item['en'] = "New button";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "comp1_field_530745";
-    item['en'] = "Your name";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "comp1_field2_952132";
-    item['en'] = "Say Something";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "comp1_button_238421";
-    item['en'] = "Post";
-    
-    item = {};
-    this.items.push(item);
-    item['key'] = "start_text_645355";
-    item['en'] = "HI! ";
   }
 
   getStringsByLanguage = () => {
