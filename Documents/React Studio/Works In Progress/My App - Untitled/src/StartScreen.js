@@ -31,6 +31,11 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
+    let transformPropValue_text = (input) => {
+      // This function modifies the value for property 'text'.
+      // There is a variable named 'input' that provides the property value.
+      return "Hi "+input+"!";;
+    }
     const style_text = {
         fontSize: 32.3,
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
@@ -38,7 +43,7 @@ export default class StartScreen extends Component {
         color: 'rgba(0, 0, 0, 0.8500)',
         textAlign: 'left',
      };
-    const value_text = this.props.ds_username;
+    const value_text = transformPropValue_text(this.props.ds_username);
     
     const style_text_outer = {
         pointerEvents: 'none',
