@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import ListItem1 from './ListItem1';
-
-// UI framework component imports
-import Appbar from 'muicss/lib/react/appbar';
+import Comp1 from './Comp1';
 
 
 export default class StartScreen extends Component {
 
   // Properties used by this component:
-  // appActions, deviceInfo
+  // appActions, deviceInfo, ds_username
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -33,8 +31,20 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
+    const style_text = {
+        fontSize: 32.3,
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
+        fontWeight: 'bold',
+        color: 'rgba(0, 0, 0, 0.8500)',
+        textAlign: 'left',
+     };
+    const value_text = this.props.ds_username;
+    
+    const style_text_outer = {
+        pointerEvents: 'none',
+     };
     const style_list = {
-        overflow: 'hidden',  // This element is not in scroll flow
+        height: 'auto',  // This element is in scroll flow
      };
     // Source items and any special components used for list/grid element 'list'.
     let items_list = [];
@@ -51,19 +61,31 @@ export default class StartScreen extends Component {
           </div>
           
         </div>
-        <Appbar className="navBar">
-          <div className="title">Start</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
-        </Appbar>
-        
-        <div className="screenFgContainer">
-          <div className="foreground">
-            <ul className='hasNestedComps elList' style={style_list}>
+        <div className="layoutFlow" style={layoutFlowStyle}>
+          <div className='elText' style={style_text_outer}>
+            <div style={style_text}>
+              <div>{value_text !== undefined ? value_text : (<span className="propValueMissing">{this.props.locStrings.start_text_645355}</span>)}</div>
+            </div>
+          
+          </div>
+          
+          <div className='hasNestedComps elList'>
+            <ul style={style_list}>
               {items_list.map((row, index) => {
-                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <ListItem1 dataSheetId={'listData1'} dataSheetRow={row} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
+                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <ListItem1 dataSheetId={'listData1'} dataSheetRow={row} username={row.username} text={row.text} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
                 return (<li key={row.key}>{itemComp}</li>)
               })}
             </ul>
+          
           </div>
+          
+          <div className='hasNestedComps elComp'>
+            <div>
+              <Comp1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
+          
+          </div>
+          
         </div>
       </div>
     )

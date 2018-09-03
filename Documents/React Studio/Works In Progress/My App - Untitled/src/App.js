@@ -16,6 +16,7 @@ export default class App extends Component {
 
     this.dataSlots = {};
     this.dataSlots['ds_activeLang'] = "en";
+    this.dataSlots['ds_username'] = "";
 
     this.updateLocalizationFromDataSheet(this.dataSheets['localizationSheet']);
 
@@ -171,6 +172,7 @@ export default class App extends Component {
           screenFormatId: this.state.screenFormatId
         },
         ds_activeLang: this.dataSlots['ds_activeLang'],
+        ds_username: this.dataSlots['ds_username'],
       };
       switch (screenId) {
         default:

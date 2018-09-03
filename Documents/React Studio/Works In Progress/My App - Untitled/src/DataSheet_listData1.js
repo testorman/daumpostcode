@@ -15,13 +15,13 @@ export default class DataSheet_listData1 extends DataSheetBase {
     
     item = {};
     this.items.push(item);
-    item['username'] = "New text. Double-click to edit (row 1)";
+    item['username'] = "kimtoma";
     item['text'] = "hahah";
     item.key = key++;
     
     item = {};
     this.items.push(item);
-    item['username'] = "New text. Double-click to edit (row 2)";
+    item['username'] = "felix\n";
     item['text'] = "are you kidding me?";
     item.key = key++;
   }

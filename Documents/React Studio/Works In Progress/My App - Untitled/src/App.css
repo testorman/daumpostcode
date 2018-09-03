@@ -295,6 +295,60 @@
     height: 2px;
   }
 
+/* This component has a fixed-size layout */
+  .Comp1 {
+    min-height: 143px;
+    width: 100%; /* This component was designed using a width of 229px */
+  }
+  .Comp1 > .background > .containerMinHeight {
+    min-height: 143px;
+  }
+
+
+  .Comp1 .elField {
+    position: relative;
+    margin-top: 0px;
+    width: 226px;
+    margin-left: 0px;
+  }
+  .Comp1 .elField > * { 
+  width: 226px;
+  height: 34px;
+  }
+  
+
+
+  .Comp1 .elField2 {
+    position: relative;
+    margin-top: 12px;
+    width: 226px;
+    margin-left: 0px;
+  }
+  .Comp1 .elField2 > * { 
+  width: 226px;
+  height: 34px;
+  }
+  
+
+.Comp1 .elButton button {
+  border: 0.0px solid transparent;
+}
+
+
+
+  .Comp1 .elButton {
+    line-height: 35px;
+    position: relative;
+    margin-top: 26px;
+    width: 145px;
+    margin-left: 31px;
+  }
+  .Comp1 .elButton > * { 
+  width: 145px;
+  height: 35px;
+  }
+  
+
 
 /* Narrowest size for this element's responsive layout */
   .StartScreen > .background > .elBackground {
@@ -331,44 +385,181 @@
     width: 100%;
     height: 100%;
   }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 55px;
+    width: 238px;
+    margin-left: 36px;
+  }
+  .StartScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+@media (min-width: 568px) {
+  .StartScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 55px;
+    width: 238px;
+    margin-left: 36px;
+  }
+  .StartScreen > .layoutFlow > .elText > * { 
+  width: 238px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .StartScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 55px;
+    width: 236px;
+    margin-left: 36px;
+  }
+  .StartScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .StartScreen > .layoutFlow > .elText {
+    position: relative;
+    margin-top: 55px;
+    width: 236px;
+    margin-left: 36px;
+  }
+  .StartScreen > .layoutFlow > .elText > * { 
+  width: 236px;
+  }
+  
 }
 
   .StartScreen .elList li {
-    margin-bottom: 9px;
+    margin-bottom: 25px;
   }
 
 
 
 /* Narrowest size for this element's responsive layout */
-  .StartScreen > .screenFgContainer > .foreground > .elList {
-    position: absolute;
-    left: 27px;
-    top: 62px;
+  .StartScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 48px;
     width: 245px;
-    height: 340px;
+    margin-left: 32px;
   }
+  .StartScreen > .layoutFlow > .elList > * { 
+  width: 245px;
+  height: 136px;
+  }
+  
 @media (min-width: 568px) {
-  .StartScreen > .screenFgContainer > .foreground > .elList {
-    left: 27px;
-    top: 62px;
+  .StartScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 48px;
     width: 245px;
-    height: 340px;
+    margin-left: 32px;
   }
+  .StartScreen > .layoutFlow > .elList > * { 
+  width: 245px;
+  height: 136px;
+  }
+  
 }
 @media (min-width: 768px) {
-  .StartScreen > .screenFgContainer > .foreground > .elList {
-    left: 27px;
-    top: 62px;
+  .StartScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 48px;
     width: 244px;
-    height: 338px;
+    margin-left: 32px;
   }
+  .StartScreen > .layoutFlow > .elList > * { 
+  width: 244px;
+  height: 135px;
+  }
+  
 }
 @media (min-width: 1024px) {
-  .StartScreen > .screenFgContainer > .foreground > .elList {
-    left: 27px;
-    top: 62px;
+  .StartScreen > .layoutFlow > .elList {
+    position: relative;
+    margin-top: 48px;
     width: 244px;
-    height: 338px;
+    margin-left: 32px;
   }
+  .StartScreen > .layoutFlow > .elList > * { 
+  width: 244px;
+  height: 135px;
+  }
+  
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .StartScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 48px;
+    width: 229px;
+    margin-left: 33px;
+  }
+  .StartScreen > .layoutFlow > .elComp > * { 
+  width: 229px;
+  height: 143px;
+  }
+  
+  .StartScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 143px;
+  }
+
+@media (min-width: 568px) {
+  .StartScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 48px;
+    width: 229px;
+    margin-left: 33px;
+  }
+  .StartScreen > .layoutFlow > .elComp > * { 
+  width: 229px;
+  height: 143px;
+  }
+  
+  .StartScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 143px;
+  }
+
+}
+@media (min-width: 768px) {
+  .StartScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 47px;
+    width: 228px;
+    margin-left: 33px;
+  }
+  .StartScreen > .layoutFlow > .elComp > * { 
+  width: 228px;
+  height: 142px;
+  }
+  
+  .StartScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 142px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .StartScreen > .layoutFlow > .elComp {
+    position: relative;
+    margin-top: 47px;
+    width: 228px;
+    margin-left: 33px;
+  }
+  .StartScreen > .layoutFlow > .elComp > * { 
+  width: 228px;
+  height: 142px;
+  }
+  
+  .StartScreen > .layoutFlow > .elComp > .background > .containerMinHeight {
+    min-height: 142px;
+  }
+
 }
 
