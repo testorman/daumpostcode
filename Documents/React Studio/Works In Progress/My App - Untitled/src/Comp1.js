@@ -39,8 +39,8 @@ export default class Comp1 extends Component {
     let row = this.props.dataSheetRow || {
     };
     row = { ...row, 
-      username: this.state.username,
       text: this.state.comment,
+      username: this.state.username,
     };
     if (this.props.dataSheetId === dataSheet.id) {
       this.props.appActions.updateInDataSheet('listData1', row);
