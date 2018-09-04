@@ -8,6 +8,15 @@ export default class Component1 extends Component {
   // Properties used by this component:
   // ds_SlotUserPhoto, visualStateIndex
 
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      state1_elText: (<div>Sign Out</div>),
+      state1_elText_plainText: "Sign Out",
+    };
+  }
+
   // --- Functions for component state index 0 (1 of 2) --- 
   
   onClick_state0_elTextCopy = (ev) => {
@@ -79,7 +88,7 @@ export default class Component1 extends Component {
         </div>
         <div className="foreground">
           <div className='state1_elText' style={style_text}>
-            <div>{this.props.locStrings.component1_text_407997}</div>
+            <div>{this.state.state1_elText}</div>
           </div>
         </div>
       </div>

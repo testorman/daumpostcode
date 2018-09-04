@@ -8,6 +8,19 @@ export default class Grid extends Component {
   // Properties used by this component:
   // imgURL, comment, name
 
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      text: (<div>New text. Double-click to edit</div>),
+      text_plainText: "New text. Double-click to edit",
+      text2: (<div>New text. Double-click to edit</div>),
+      text2_plainText: "New text. Double-click to edit",
+      text3: (<div>New text. Double-click to edit</div>),
+      text3_plainText: "New text. Double-click to edit",
+    };
+  }
+
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -59,21 +72,21 @@ export default class Grid extends Component {
           
           <div className='baseFont elText' style={style_text_outer}>
             <div style={style_text}>
-              <div>{value_text !== undefined ? value_text : (<span className="propValueMissing">{this.props.locStrings.component1_text_839157}</span>)}</div>
+              <div>{value_text !== undefined ? value_text : (<span className="propValueMissing">{this.state.text}</span>)}</div>
             </div>
           
           </div>
           
           <div className='baseFont elText2' style={style_text2_outer}>
             <div style={style_text2}>
-              <div>{value_text2 !== undefined ? value_text2 : (<span className="propValueMissing">{this.props.locStrings.component1_text2_835721}</span>)}</div>
+              <div>{value_text2 !== undefined ? value_text2 : (<span className="propValueMissing">{this.state.text2}</span>)}</div>
             </div>
           
           </div>
           
           <div className='baseFont elText3' style={style_text3_outer}>
             <div style={style_text3}>
-              <div>{this.props.locStrings.component1_text3_966792}</div>
+              <div>{this.state.text3}</div>
             </div>
           
           </div>
