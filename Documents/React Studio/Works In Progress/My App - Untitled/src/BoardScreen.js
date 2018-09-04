@@ -80,7 +80,7 @@ export default class BoardScreen extends Component {
           <div className="foreground">
             <div className='elRectangle' style={style_rectangle} />
             <div className='hasNestedComps elComponent'>
-              <Component1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+              <Component1 ds_SlotUserPhoto={""} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           </div>
         </div>

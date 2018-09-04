@@ -6,7 +6,7 @@ import img_state1_elImage from './images/Grid_elImage_519339.jpg';
 export default class Component1 extends Component {
 
   // Properties used by this component:
-  // visualStateIndex
+  // ds_SlotUserPhoto, visualStateIndex
 
   // --- Functions for component state index 0 (1 of 2) --- 
   
@@ -51,7 +51,7 @@ export default class Component1 extends Component {
     let layoutFlowStyle = {};
     
     const style_image = {
-        backgroundImage: 'url('+img_state1_elImage+')',
+        backgroundImage: 'url('+(this.props.ds_SlotUserPhoto || img_state1_elImage)+')',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: '50% 50%',
         backgroundSize: 'cover',
