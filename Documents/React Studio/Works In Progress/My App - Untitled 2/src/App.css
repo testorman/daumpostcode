@@ -270,3 +270,24 @@
     height: 100%;
   }
 
+.StartScreen .elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.StartScreen .elIconButton:focus {
+  box-shadow: 0 0 6px rgba(0, 149, 214, 0.2500);
+  outline: none;
+}
+
+
+
+  .StartScreen > .screenFgContainer > .foreground > .elIconButton {
+    line-height: 28px;
+    position: absolute;
+    left: 158px;
+    top: 17px;
+    width: 56px;
+    height: 28px;
+  }
+

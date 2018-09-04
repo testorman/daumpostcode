@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import btn_icon_206821 from './images/btn_icon_206821.png';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -32,6 +33,18 @@ export default class StartScreen extends Component {
         backgroundColor: '#f6f6f6',
         pointerEvents: 'none',
      };
+    const style_iconButton = {
+        display: 'block',
+        backgroundImage: 'url('+btn_icon_206821+')',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '52.008%',
+        backgroundPosition: '50% 0%',
+        color: '(null)',
+        textAlign: 'left',
+        backgroundColor: 'transparent',
+        textTransform: 'uppercase',
+        pointerEvents: 'none',
+     };
     
     return (
       <Container fluid={true} className="AppScreen StartScreen" style={baseStyle}>
@@ -46,6 +59,11 @@ export default class StartScreen extends Component {
           <div className="title">Start</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
         </Appbar>
         
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <button className='actionFont elIconButton' style={style_iconButton}   />
+          </div>
+        </div>
       </Container>
     )
   }
