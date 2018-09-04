@@ -631,8 +631,8 @@
 
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
-    position: absolute;
-    left: 184px;
+    position: fixed;
+    right: 0px;
     top: 16px;
     width: 136px;
     height: 30px;
@@ -643,7 +643,7 @@
 
 @media (min-width: 568px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
-    left: 184px;
+    right: 0px;
     top: 16px;
     width: 136px;
     height: 30px;
@@ -655,7 +655,7 @@
 }
 @media (min-width: 768px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
-    left: 182px;
+    right: 0px;
     top: 16px;
     width: 135px;
     height: 30px;
@@ -667,7 +667,7 @@
 }
 @media (min-width: 1024px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
-    left: 182px;
+    right: 0px;
     top: 16px;
     width: 135px;
     height: 30px;
@@ -730,8 +730,8 @@
 
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
-    position: absolute;
-    left: 184px;
+    position: fixed;
+    right: 0px;
     top: 16px;
     width: 136px;
     height: 30px;
@@ -742,7 +742,7 @@
 
 @media (min-width: 568px) {
   .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
-    left: 184px;
+    right: 0px;
     top: 16px;
     width: 136px;
     height: 30px;
@@ -754,7 +754,7 @@
 }
 @media (min-width: 768px) {
   .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
-    left: 182px;
+    right: 0px;
     top: 16px;
     width: 135px;
     height: 30px;
@@ -766,7 +766,7 @@
 }
 @media (min-width: 1024px) {
   .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
-    left: 182px;
+    right: 0px;
     top: 16px;
     width: 135px;
     height: 30px;
