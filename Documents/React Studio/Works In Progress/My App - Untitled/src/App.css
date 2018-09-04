@@ -638,16 +638,16 @@
   .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
     line-height: 36px;
     position: absolute;
-    left: calc(3.8% + 0px);
-    top: 5px;
+    left: calc(3.8% + -1px);
+    top: 12px;
     width: 41px;
     height: 36px;
   }
 @media (min-width: 568px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
     line-height: 36px;
-    left: calc(3.8% + 0px);
-    top: 5px;
+    left: calc(3.8% + -1px);
+    top: 12px;
     width: 41px;
     height: 36px;
   }
@@ -655,8 +655,8 @@
 @media (min-width: 768px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
     line-height: 36px;
-    left: calc(3.8% + 0px);
-    top: 5px;
+    left: calc(3.8% + -1px);
+    top: 11px;
     width: 41px;
     height: 36px;
   }
@@ -664,8 +664,8 @@
 @media (min-width: 1024px) {
   .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
     line-height: 36px;
-    left: calc(3.8% + 0px);
-    top: 5px;
+    left: calc(3.8% + -1px);
+    top: 11px;
     width: 41px;
     height: 36px;
   }
