@@ -291,6 +291,59 @@
   }
 }
 
+
+/* Narrowest size for this element's responsive layout */
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 256px;
+    width: 163px;
+    margin-left: 52px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+@media (min-width: 568px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 256px;
+    width: 163px;
+    margin-left: 52px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 254px;
+    width: 162px;
+    margin-left: 52px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 162px;
+  height: 162px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 254px;
+    width: 162px;
+    margin-left: 52px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 162px;
+  height: 162px;
+  }
+  
+}
+
 /* This component has a fixed-size layout */
   .Grid {
     min-height: 359px;

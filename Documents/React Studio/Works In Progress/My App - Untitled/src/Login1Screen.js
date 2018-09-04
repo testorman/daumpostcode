@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FirebaseLogin from './FirebaseLogin';
 import btn_icon_back_login1 from './images/btn_icon_back_login1.png';
 import firebase from 'firebase';
 import firestore from 'firebase/firestore';
@@ -19,8 +20,6 @@ export default class Login1Screen extends Component {
       if (firebase.auth().currentUser) {
         if (this._elFirebaseLogin)
           this._elFirebaseLogin.saveCurrentUserDataInApp();
-        
-        this.props.appActions.goToScreen('board');
         
       }
     }, 50);
@@ -53,6 +52,15 @@ export default class Login1Screen extends Component {
         <div className="background">
           <div className='appBg containerMinHeight elBackground' style={style_background_outer}>
             <div style={style_background} />
+          
+          </div>
+          
+        </div>
+        <div className="layoutFlow" style={layoutFlowStyle}>
+          <div className='elFirebaseLogin'>
+            <div>
+              <FirebaseLogin ref={(el)=> this._elFirebaseLogin = el} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
           
           </div>
           

@@ -7,7 +7,7 @@ export default class FirebaseLogin extends Component {
   constructor(props) {
     super(props);
     
-    this.autosignInEnabled = true;
+    this.autosignInEnabled = false;
     
     this.firebaseUIConfig = {
       signInFlow: 'popup',
@@ -41,23 +41,19 @@ export default class FirebaseLogin extends Component {
     var userId = user.uid;          
     console.log("got user: %s, %s, uid %s", userName, email, userId);
     
-    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserName", v) })(userName);
-    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserEmail", v) })(email || '');
-    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserPhoto", v) })(userPhotoUrl);
-    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserID", v) })(userId);
+    ()(userName);
+    ()(email || '');
+    ()(userPhotoUrl);
+    ()(userId);
   }
 
   loginSuccess() {
-    this.props.appActions.goToScreen('board');
-    
 
   }
   
   loginFailed(err) {
     // This is typically never called by Firebase UI because the sign-in flow is handled as a popup.
     // We're including this code from React Studio as documentation for other plugins.
-    this.props.appActions.goToScreen('board', { errorText: ''+err });
-    
 
   }
   
