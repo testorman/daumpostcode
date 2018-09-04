@@ -24,9 +24,24 @@ export default class TestScreen extends Component {
       layoutFlowStyle.overflow = 'hidden';
     }
     
+    const style_background = {
+        width: '100%',
+        height: '100%',
+     };
+    const style_background_outer = {
+        backgroundColor: 'white',
+        pointerEvents: 'none',
+     };
     
     return (
       <div className="AppScreen TestScreen" style={baseStyle}>
+        <div className="background">
+          <div className='appBg containerMinHeight elBackground' style={style_background_outer}>
+            <div style={style_background} />
+          
+          </div>
+          
+        </div>
         <Appbar className="navBar">
           <div className="title">TestScreen</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }><img src={btn_icon_back_testscreen} alt="" style={{width: '50%'}} /></div>
         </Appbar>

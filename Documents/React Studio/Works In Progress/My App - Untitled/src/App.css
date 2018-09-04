@@ -253,6 +253,44 @@
   width: 100%;
 }
 
+
+/* Narrowest size for this element's responsive layout */
+  .TestScreen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .TestScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .TestScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .TestScreen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* This component has a fixed-size layout */
   .Grid {
     min-height: 359px;
