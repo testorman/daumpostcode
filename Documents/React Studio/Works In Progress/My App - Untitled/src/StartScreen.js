@@ -53,7 +53,7 @@ export default class StartScreen extends Component {
             <div style={style_list}>
               {items_list.map((row, index) => {
                 let itemClasses = `gridItem cols1_${index % 1} cols3_${index % 3} cols5_${index % 5} cols4_${index % 4}`;
-                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <Grid dataSheetId={'postfirebase'} dataSheetRow={row} imgURL={row.imgURL} comment={row.comment} name={row.name} created_at={row.created_at} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
+                let itemComp = (row._componentId) ? listComps_list[row._componentId] : <Grid dataSheetId={'postfirebase'} dataSheetRow={row} imgURL={row.imgURL} comment={row.comment} name={row.name} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />;
                 return (
                   <div className={itemClasses} key={row.key}>
                     {itemComp}

@@ -6,7 +6,7 @@ import img_elImage from './images/Grid_elImage_519339.jpg';
 export default class Grid extends Component {
 
   // Properties used by this component:
-  // imgURL, comment, name, created_at
+  // imgURL, comment, name
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -45,8 +45,6 @@ export default class Grid extends Component {
         color: 'rgba(0, 0, 0, 0.8500)',
         textAlign: 'left',
      };
-    const value_text3 = this.props.created_at;
-    
     const style_text3_outer = {
         pointerEvents: 'none',
      };
@@ -75,7 +73,7 @@ export default class Grid extends Component {
           
           <div className='baseFont elText3' style={style_text3_outer}>
             <div style={style_text3}>
-              <div>{value_text3 !== undefined ? value_text3 : (<span className="propValueMissing">{this.props.locStrings.component1_text3_966792}</span>)}</div>
+              <div>{this.props.locStrings.component1_text3_966792}</div>
             </div>
           
           </div>
