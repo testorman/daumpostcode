@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import FirebaseLogin from './FirebaseLogin';
+import btn_icon_back_logingate from './images/btn_icon_back_logingate.png';
 import firebase from 'firebase';
 import firestore from 'firebase/firestore';
+
+// UI framework component imports
+import Appbar from 'muicss/lib/react/appbar';
 
 
 export default class LogingateScreen extends Component {
@@ -63,6 +67,10 @@ export default class LogingateScreen extends Component {
           </div>
           
         </div>
+        <Appbar className="navBar">
+          <div className="title">Logingate</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }><img src={btn_icon_back_logingate} alt="" style={{width: '50%'}} /></div>
+        </Appbar>
+        
       </div>
     )
   }
