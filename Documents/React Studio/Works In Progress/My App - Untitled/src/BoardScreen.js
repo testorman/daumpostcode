@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Grid from './Grid';
-import btn_icon_688635 from './images/btn_icon_688635.png';
+import Component1 from './Component1';
 import btn_icon_342475 from './images/btn_icon_342475.png';
 
 // UI framework component imports
-import Button from 'muicss/lib/react/button';
 import Appbar from 'muicss/lib/react/appbar';
 
 
@@ -46,11 +45,6 @@ export default class BoardScreen extends Component {
     let listComps_list = {};
     items_list = items_list.concat(this.props.appActions.getDataSheet('postfirebase').items);
     
-    const style_fab = {
-        display: 'block',
-        textAlign: 'left',
-        pointerEvents: 'none',
-     };
     const style_rectangle = {
         background: 'rgba(0, 0, 0, 1.000)',
         pointerEvents: 'none',
@@ -100,10 +94,10 @@ export default class BoardScreen extends Component {
         
         <div className="screenFgContainer">
           <div className="foreground">
-            <Button className='actionFont state0_elFab' style={style_fab}  variant="fab" color="accent" >
-              <img src={btn_icon_688635} alt="" style={{width: '100%', marginTop: '4%'}} />
-            </Button>
             <div className='state0_elRectangle' style={style_rectangle} />
+            <div className='hasNestedComps state0_elComponent425276'>
+              <Component1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
             <button className='actionFont state0_elIconButton' style={style_iconButton}   />
           </div>
         </div>
@@ -134,6 +128,13 @@ export default class BoardScreen extends Component {
           <div className="title">Board</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
         </Appbar>
         
+        <div className="screenFgContainer">
+          <div className="foreground">
+            <div className='hasNestedComps state1_elComponent425276'>
+              <Component1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

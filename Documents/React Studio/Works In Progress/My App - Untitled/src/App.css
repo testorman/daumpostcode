@@ -312,6 +312,55 @@
   }
   
 
+/* This component has a fixed-size layout */
+  .Component1 {
+    min-height: 30px;
+    width: 100%; /* This component was designed using a width of 136px */
+  }
+  .Component1 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+
+  .Component1 .state0_elTextCopy {
+    position: absolute;
+    left: 86px;
+    top: 8px;
+    width: 47px;
+    height: 18px;
+  }
+
+/* This component has a fixed-size layout */
+  .Component1 {
+    min-height: 30px;
+    width: 100%; /* This component was designed using a width of 136px */
+  }
+  .Component1 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+
+  .Component1 .state1_elImage {
+    position: relative;
+    margin-top: 4px;
+    width: 23px;
+    margin-left: 104px;
+  }
+  .Component1 .state1_elImage > * { 
+  width: 23px;
+  height: 23px;
+  }
+  
+
+
+  .Component1 .state1_elText {
+    position: absolute;
+    left: 49px;
+    top: 10px;
+    width: 50px;
+    height: 14px;
+  }
+
 
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .background > .state0_elBackground {
@@ -545,49 +594,6 @@
   
 }
 
-.BoardScreen .state0_elFab {
-  border: 0.0px solid transparent;
-}
-
-
-
-/* Narrowest size for this element's responsive layout */
-  .BoardScreen > .screenFgContainer > .foreground > .state0_elFab {
-    line-height: 68px;
-    position: fixed;
-    left: 236px;
-    bottom: 34px;
-    width: 68px;
-    height: 68px;
-  }
-@media (min-width: 568px) {
-  .BoardScreen > .screenFgContainer > .foreground > .state0_elFab {
-    line-height: 68px;
-    left: 236px;
-    bottom: 34px;
-    width: 68px;
-    height: 68px;
-  }
-}
-@media (min-width: 768px) {
-  .BoardScreen > .screenFgContainer > .foreground > .state0_elFab {
-    line-height: 68px;
-    left: 234px;
-    bottom: 34px;
-    width: 68px;
-    height: 68px;
-  }
-}
-@media (min-width: 1024px) {
-  .BoardScreen > .screenFgContainer > .foreground > .state0_elFab {
-    line-height: 68px;
-    left: 234px;
-    bottom: 34px;
-    width: 68px;
-    height: 68px;
-  }
-}
-
 
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .screenFgContainer > .foreground > .state0_elRectangle {
@@ -620,6 +626,56 @@
     width: 175px;
     height: 151px;
   }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
+    position: absolute;
+    left: 184px;
+    top: 16px;
+    width: 136px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+@media (min-width: 568px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
+    left: 184px;
+    top: 16px;
+    width: 136px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+}
+@media (min-width: 768px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
+    left: 182px;
+    top: 16px;
+    width: 135px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 {
+    left: 182px;
+    top: 16px;
+    width: 135px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
 }
 
 .BoardScreen .state0_elIconButton {
@@ -669,5 +725,55 @@
     width: 41px;
     height: 36px;
   }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
+    position: absolute;
+    left: 184px;
+    top: 16px;
+    width: 136px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+@media (min-width: 568px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
+    left: 184px;
+    top: 16px;
+    width: 136px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+}
+@media (min-width: 768px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
+    left: 182px;
+    top: 16px;
+    width: 135px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
+}
+@media (min-width: 1024px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 {
+    left: 182px;
+    top: 16px;
+    width: 135px;
+    height: 30px;
+  }
+  .BoardScreen > .screenFgContainer > .foreground > .state1_elComponent425276 > .background > .containerMinHeight {
+    min-height: 30px;
+  }
+
 }
 
