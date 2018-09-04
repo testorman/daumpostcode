@@ -622,3 +622,52 @@
   }
 }
 
+.BoardScreen .state0_elIconButton {
+  cursor: pointer;
+  border: 0.0px solid transparent;
+}
+
+.BoardScreen .state0_elIconButton:focus {
+  box-shadow: 0 0 6px rgba(0, 7, 10, 0.2500);
+  outline: none;
+}
+
+
+
+/* Narrowest size for this element's responsive layout */
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
+    line-height: 36px;
+    position: absolute;
+    left: 18px;
+    top: 0px;
+    width: 41px;
+    height: 36px;
+  }
+@media (min-width: 568px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
+    line-height: 36px;
+    left: 18px;
+    top: 0px;
+    width: 41px;
+    height: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
+    line-height: 36px;
+    left: 17px;
+    top: 0px;
+    width: 41px;
+    height: 36px;
+  }
+}
+@media (min-width: 1024px) {
+  .BoardScreen > .screenFgContainer > .foreground > .state0_elIconButton {
+    line-height: 36px;
+    left: 17px;
+    top: 0px;
+    width: 41px;
+    height: 36px;
+  }
+}
+

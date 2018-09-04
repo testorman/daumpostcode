@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Grid from './Grid';
 import btn_icon_688635 from './images/btn_icon_688635.png';
+import btn_icon_342475 from './images/btn_icon_342475.png';
 
 // UI framework component imports
 import Button from 'muicss/lib/react/button';
@@ -54,6 +55,18 @@ export default class BoardScreen extends Component {
         background: 'rgba(0, 0, 0, 1.000)',
         pointerEvents: 'none',
      };
+    const style_iconButton = {
+        display: 'block',
+        backgroundImage: 'url('+btn_icon_342475+')',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '89.562%',
+        backgroundPosition: '50% 0%',
+        color: '(null)',
+        textAlign: 'left',
+        backgroundColor: 'transparent',
+        textTransform: 'uppercase',
+        pointerEvents: 'none',
+     };
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
@@ -91,6 +104,7 @@ export default class BoardScreen extends Component {
               <img src={btn_icon_688635} alt="" style={{width: '100%', marginTop: '4%'}} />
             </Button>
             <div className='state0_elRectangle' style={style_rectangle} />
+            <button className='actionFont state0_elIconButton' style={style_iconButton}   />
           </div>
         </div>
       </div>
