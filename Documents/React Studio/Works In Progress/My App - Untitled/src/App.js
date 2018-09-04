@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
-import StartScreen from './StartScreen.js';
+import BoardScreen from './BoardScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 import DataSheet_postfirebase from './DataSheet_postfirebase.js';
 import firebase from 'firebase';
@@ -41,7 +41,7 @@ export default class App extends Component {
     
 
     this.state = {
-      currentScreen: 'start',
+      currentScreen: 'board',
       currentScreenProps: {},
       screenFormatId: '',
       screenTransitionForward: true,
@@ -277,8 +277,8 @@ export default class App extends Component {
       switch (screenId) {
         default:
           return null;
-        case 'start':
-          return (<StartScreen {...screenProps} />)
+        case 'board':
+          return (<BoardScreen {...screenProps} />)
       }
     }
 
