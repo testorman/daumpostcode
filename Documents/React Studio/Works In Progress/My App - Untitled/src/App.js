@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
+import GoogleLoginScreen from './GoogleLoginScreen.js';
 import BoardScreen from './BoardScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 import DataSheet_postfirebase from './DataSheet_postfirebase.js';
@@ -277,6 +278,8 @@ export default class App extends Component {
       switch (screenId) {
         default:
           return null;
+        case 'googlelogin':
+          return (<GoogleLoginScreen {...screenProps} />)
         case 'board':
           return (<BoardScreen {...screenProps} />)
       }

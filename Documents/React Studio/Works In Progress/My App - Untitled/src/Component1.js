@@ -11,7 +11,8 @@ export default class Component1 extends Component {
   // --- Functions for component state index 0 (1 of 2) --- 
   
   onClick_state0_elTextCopy = (ev) => {
-    alert("hey man");
+    // Go to screen 'googleLogin'
+    this.props.appActions.goToScreen('googlelogin', { transitionId: 'fadeIn' });
   
   }
   
