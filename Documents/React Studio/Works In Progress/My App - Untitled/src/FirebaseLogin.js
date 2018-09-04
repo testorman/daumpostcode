@@ -56,8 +56,6 @@ export default class FirebaseLogin extends Component {
   loginFailed(err) {
     // This is typically never called by Firebase UI because the sign-in flow is handled as a popup.
     // We're including this code from React Studio as documentation for other plugins.
-    this.props.appActions.goToScreen('board', { errorText: ''+err });
-    
 
   }
   
