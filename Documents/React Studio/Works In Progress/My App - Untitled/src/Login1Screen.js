@@ -39,9 +39,24 @@ export default class Login1Screen extends Component {
       layoutFlowStyle.overflow = 'hidden';
     }
     
+    const style_background = {
+        width: '100%',
+        height: '100%',
+     };
+    const style_background_outer = {
+        backgroundColor: 'white',
+        pointerEvents: 'none',
+     };
     
     return (
       <div className="AppScreen Login1Screen" style={baseStyle}>
+        <div className="background">
+          <div className='appBg containerMinHeight elBackground' style={style_background_outer}>
+            <div style={style_background} />
+          
+          </div>
+          
+        </div>
         <Appbar className="navBar">
           <div className="title">Login 1</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }><img src={btn_icon_back_login1} alt="" style={{width: '50%'}} /></div>
         </Appbar>
