@@ -253,6 +253,97 @@
   width: 100%;
 }
 
+
+/* Narrowest size for this element's responsive layout */
+  .Login1Screen > .background > .elBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+@media (min-width: 568px) {
+  .Login1Screen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .Login1Screen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .Login1Screen > .background > .elBackground {
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/* Narrowest size for this element's responsive layout */
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 66px;
+    width: 163px;
+    margin-left: 82px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+@media (min-width: 568px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 66px;
+    width: 163px;
+    margin-left: 82px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 163px;
+  height: 163px;
+  }
+  
+}
+@media (min-width: 768px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 66px;
+    width: 162px;
+    margin-left: 82px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 162px;
+  height: 162px;
+  }
+  
+}
+@media (min-width: 1024px) {
+  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+    position: relative;
+    margin-top: 66px;
+    width: 162px;
+    margin-left: 82px;
+  }
+  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  width: 162px;
+  height: 162px;
+  }
+  
+}
+
 /* This component has a fixed-size layout */
   .Grid {
     min-height: 359px;
@@ -311,6 +402,55 @@
   width: 238px;
   }
   
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 26px;
+    width: 100%; /* This component was designed using a width of 128px */
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 26px;
+  }
+
+
+  .UserInfo .state0_elTextCopy {
+    position: absolute;
+    left: 65px;
+    top: 5px;
+    width: 67px;
+    height: 18px;
+  }
+
+/* This component has a fixed-size layout */
+  .UserInfo {
+    min-height: 26px;
+    width: 100%; /* This component was designed using a width of 128px */
+  }
+  .UserInfo > .background > .containerMinHeight {
+    min-height: 26px;
+  }
+
+
+  .UserInfo .state1_elImage {
+    position: relative;
+    margin-top: 3px;
+    width: 23px;
+    margin-left: 104px;
+  }
+  .UserInfo .state1_elImage > * { 
+  width: 23px;
+  height: 23px;
+  }
+  
+
+
+  .UserInfo .state1_elText {
+    position: absolute;
+    left: 19px;
+    top: 7px;
+    width: 79px;
+    height: 14px;
+  }
 
 
 /* Narrowest size for this element's responsive layout */
@@ -547,193 +687,51 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent {
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo {
     position: fixed;
     right: 0px;
     top: 18px;
-    width: 136px;
-    height: 30px;
+    width: 130px;
+    height: 26px;
   }
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent > .background > .containerMinHeight {
-    min-height: 0px;
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 26px;
   }
 
 @media (min-width: 568px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent {
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo {
     right: 0px;
     top: 18px;
-    width: 136px;
-    height: 30px;
+    width: 130px;
+    height: 26px;
   }
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent > .background > .containerMinHeight {
-    min-height: 0px;
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 26px;
   }
 
 }
 @media (min-width: 768px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent {
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo {
     right: 0px;
     top: 18px;
-    width: 135px;
-    height: 30px;
+    width: 130px;
+    height: 26px;
   }
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent > .background > .containerMinHeight {
-    min-height: 0px;
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
+    min-height: 26px;
   }
 
 }
 @media (min-width: 1024px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent {
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo {
     right: 0px;
     top: 18px;
-    width: 135px;
-    height: 30px;
+    width: 130px;
+    height: 26px;
   }
-  .BoardScreen > .screenFgContainer > .foreground > .elComponent > .background > .containerMinHeight {
-    min-height: 0px;
-  }
-
-}
-
-/* This component has a fixed-size layout */
-  .Component1 {
-    min-height: 26px;
-    min-width: 128px;
-     /* This component has a fixed size */
-  }
-  .Component1 > .background > .containerMinHeight {
+  .BoardScreen > .screenFgContainer > .foreground > .elUserInfo > .background > .containerMinHeight {
     min-height: 26px;
   }
 
-
-  .Component1 .state0_elTextCopy {
-    position: absolute;
-    left: 65px;
-    top: 5px;
-    width: 67px;
-    height: 18px;
-  }
-
-/* This component has a fixed-size layout */
-  .Component1 {
-    min-height: 26px;
-    min-width: 128px;
-     /* This component has a fixed size */
-  }
-  .Component1 > .background > .containerMinHeight {
-    min-height: 26px;
-  }
-
-
-  .Component1 .state1_elImage {
-    position: relative;
-    margin-top: 3px;
-    width: 23px;
-    margin-left: 104px;
-  }
-  .Component1 .state1_elImage > * { 
-  width: 23px;
-  height: 23px;
-  }
-  
-
-
-  .Component1 .state1_elText {
-    position: absolute;
-    left: 19px;
-    top: 7px;
-    width: 79px;
-    height: 14px;
-  }
-
-
-/* Narrowest size for this element's responsive layout */
-  .Login1Screen > .background > .elBackground {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-@media (min-width: 568px) {
-  .Login1Screen > .background > .elBackground {
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .Login1Screen > .background > .elBackground {
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 1024px) {
-  .Login1Screen > .background > .elBackground {
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
-/* Narrowest size for this element's responsive layout */
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
-    position: relative;
-    margin-top: 66px;
-    width: 163px;
-    margin-left: 82px;
-  }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
-  width: 163px;
-  height: 163px;
-  }
-  
-@media (min-width: 568px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
-    position: relative;
-    margin-top: 66px;
-    width: 163px;
-    margin-left: 82px;
-  }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
-  width: 163px;
-  height: 163px;
-  }
-  
-}
-@media (min-width: 768px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
-    position: relative;
-    margin-top: 66px;
-    width: 162px;
-    margin-left: 82px;
-  }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
-  width: 162px;
-  height: 162px;
-  }
-  
-}
-@media (min-width: 1024px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
-    position: relative;
-    margin-top: 66px;
-    width: 162px;
-    margin-left: 82px;
-  }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
-  width: 162px;
-  height: 162px;
-  }
-  
 }
 

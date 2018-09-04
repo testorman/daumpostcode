@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Grid from './Grid';
+import UserInfo from './UserInfo';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -73,8 +74,8 @@ export default class BoardScreen extends Component {
         
         <div className="screenFgContainer">
           <div className="foreground">
-            <div className='hasNestedComps elComponent'>
-              {/* WARNING: element 'Component' in 'Board' has no component set */}
+            <div className='hasNestedComps elUserInfo'>
+              <UserInfo ds_SlotUserPhoto={""} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           </div>
         </div>
