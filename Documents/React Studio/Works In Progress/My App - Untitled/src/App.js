@@ -19,6 +19,10 @@ export default class App extends Component {
 
     this.dataSlots = {};
     this.dataSlots['ds_activeLang'] = "en";
+    this.dataSlots['ds_SlotUserID'] = "";
+    this.dataSlots['ds_SlotUserName'] = "";
+    this.dataSlots['ds_SlotUserEmail'] = "";
+    this.dataSlots['ds_SlotUserPhoto'] = "";
 
     this.updateLocalizationFromDataSheet(this.dataSheets['localizationSheet']);
 
@@ -274,6 +278,10 @@ export default class App extends Component {
           screenFormatId: this.state.screenFormatId
         },
         ds_activeLang: this.dataSlots['ds_activeLang'],
+        ds_SlotUserID: this.dataSlots['ds_SlotUserID'],
+        ds_SlotUserName: this.dataSlots['ds_SlotUserName'],
+        ds_SlotUserEmail: this.dataSlots['ds_SlotUserEmail'],
+        ds_SlotUserPhoto: this.dataSlots['ds_SlotUserPhoto'],
       };
       switch (screenId) {
         default:
