@@ -6,7 +6,6 @@ import btn_icon_342475 from './images/btn_icon_342475.png';
 
 // UI framework component imports
 import Button from 'muicss/lib/react/button';
-import Appbar from 'muicss/lib/react/appbar';
 
 
 export default class BoardScreen extends Component {
@@ -94,10 +93,6 @@ export default class BoardScreen extends Component {
           </div>
           
         </div>
-        <Appbar className="navBar">
-          <div className="title">Board</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
-        </Appbar>
-        
         <div className="screenFgContainer">
           <div className="foreground">
             <Button className='actionFont state0_elFab' style={style_fab}  variant="fab" color="accent" >
@@ -130,10 +125,6 @@ export default class BoardScreen extends Component {
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
-        <Appbar className="navBar">
-          <div className="title">Board</div>  <div className="backBtn" onClick={ (ev)=>{ this.props.appActions.goBack() } }></div>
-        </Appbar>
-        
       </div>
     )
   }
