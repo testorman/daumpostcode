@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
-import Login1Screen from './Login1Screen.js';
+import LogingateScreen from './LogingateScreen.js';
 import BoardScreen from './BoardScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 import DataSheet_postfirebase from './DataSheet_postfirebase.js';
@@ -286,8 +286,8 @@ export default class App extends Component {
       switch (screenId) {
         default:
           return null;
-        case 'login1':
-          return (<Login1Screen {...screenProps} />)
+        case 'logingate':
+          return (<LogingateScreen {...screenProps} />)
         case 'board':
           return (<BoardScreen {...screenProps} />)
       }

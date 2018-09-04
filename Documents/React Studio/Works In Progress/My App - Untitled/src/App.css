@@ -255,7 +255,7 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .Login1Screen > .background > .elBackground {
+  .LogingateScreen > .background > .elBackground {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -264,7 +264,7 @@
     height: 100%;
   }
 @media (min-width: 568px) {
-  .Login1Screen > .background > .elBackground {
+  .LogingateScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -273,7 +273,7 @@
   }
 }
 @media (min-width: 768px) {
-  .Login1Screen > .background > .elBackground {
+  .LogingateScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -282,7 +282,7 @@
   }
 }
 @media (min-width: 1024px) {
-  .Login1Screen > .background > .elBackground {
+  .LogingateScreen > .background > .elBackground {
     left: 0px;
     right: 0px;
     top: 0px;
@@ -293,51 +293,51 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin {
     position: relative;
     margin-top: 66px;
     width: 163px;
     margin-left: 82px;
   }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin > * { 
   width: 163px;
   height: 163px;
   }
   
 @media (min-width: 568px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin {
     position: relative;
     margin-top: 66px;
     width: 163px;
     margin-left: 82px;
   }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin > * { 
   width: 163px;
   height: 163px;
   }
   
 }
 @media (min-width: 768px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin {
     position: relative;
     margin-top: 66px;
     width: 162px;
     margin-left: 82px;
   }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin > * { 
   width: 162px;
   height: 162px;
   }
   
 }
 @media (min-width: 1024px) {
-  .Login1Screen > .layoutFlow > .elFirebaseLogin {
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin {
     position: relative;
     margin-top: 66px;
     width: 162px;
     margin-left: 82px;
   }
-  .Login1Screen > .layoutFlow > .elFirebaseLogin > * { 
+  .LogingateScreen > .layoutFlow > .elFirebaseLogin > * { 
   width: 162px;
   height: 162px;
   }
