@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import FirebaseLogin from './FirebaseLogin';
 import firebase from 'firebase';
 import firestore from 'firebase/firestore';
 
@@ -36,33 +35,9 @@ export default class Login1Screen extends Component {
       layoutFlowStyle.overflow = 'hidden';
     }
     
-    const style_background = {
-        width: '100%',
-        height: '100%',
-     };
-    const style_background_outer = {
-        backgroundColor: 'white',
-        pointerEvents: 'none',
-     };
     
     return (
       <div className="AppScreen Login1Screen" style={baseStyle}>
-        <div className="background">
-          <div className='appBg containerMinHeight elBackground' style={style_background_outer}>
-            <div style={style_background} />
-          
-          </div>
-          
-        </div>
-        <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='elFirebaseLogin'>
-            <div>
-              <FirebaseLogin ref={(el)=> this._elFirebaseLogin = el} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
-            </div>
-          
-          </div>
-          
-        </div>
       </div>
     )
   }
