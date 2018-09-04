@@ -21,7 +21,7 @@ export default class UserInfo extends Component {
   
   onClick_state0_elTextCopy = (ev) => {
     // Go to screen 'Login 1'
-    this.props.appActions.goToScreen('login1', { transitionId: 'slideIn_right' });
+    this.props.appActions.goToScreen('login1', { transitionId: 'fadeIn' });
   
   }
   
