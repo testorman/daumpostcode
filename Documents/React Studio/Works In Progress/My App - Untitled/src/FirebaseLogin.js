@@ -7,7 +7,7 @@ export default class FirebaseLogin extends Component {
   constructor(props) {
     super(props);
     
-    this.autosignInEnabled = false;
+    this.autosignInEnabled = true;
     
     this.firebaseUIConfig = {
       signInFlow: 'popup',
@@ -41,10 +41,10 @@ export default class FirebaseLogin extends Component {
     var userId = user.uid;          
     console.log("got user: %s, %s, uid %s", userName, email, userId);
     
-    ()(userName);
-    ()(email || '');
-    ()(userPhotoUrl);
-    ()(userId);
+    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserName", v) })(userName);
+    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserEmail", v) })(email || '');
+    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserPhoto", v) })(userPhotoUrl);
+    ((v) => { this.props.appActions.updateDataSlot("ds_SlotUserID", v) })(userId);
   }
 
   loginSuccess() {
