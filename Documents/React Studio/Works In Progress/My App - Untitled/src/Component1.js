@@ -10,6 +10,12 @@ export default class Component1 extends Component {
 
   // --- Functions for component state index 0 (1 of 2) --- 
   
+  onClick_state0_elTextCopy = (ev) => {
+    alert("hey man");
+  
+  }
+  
+  
   renderState0() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -21,13 +27,13 @@ export default class Component1 extends Component {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
         color: 'white',
         textAlign: 'left',
-        pointerEvents: 'none',
+        cursor: 'pointer',
      };
     
     return (
       <div className="Component1" style={baseStyle}>
         <div className="compContent">
-          <div className='state0_elTextCopy' style={style_textCopy}>
+          <div className='state0_elTextCopy' style={style_textCopy} onClick={this.onClick_state0_elTextCopy} >
             <div>{this.props.locStrings.component1_text_466302}</div>
           </div>
         </div>
