@@ -631,9 +631,9 @@
 
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .screenFgContainer > .foreground > .elComponent {
-    position: absolute;
-    left: 218px;
-    top: 0px;
+    position: fixed;
+    right: 0px;
+    top: 18px;
     width: 136px;
     height: 30px;
   }
@@ -643,8 +643,8 @@
 
 @media (min-width: 568px) {
   .BoardScreen > .screenFgContainer > .foreground > .elComponent {
-    left: 218px;
-    top: 0px;
+    right: 0px;
+    top: 18px;
     width: 136px;
     height: 30px;
   }
@@ -655,8 +655,8 @@
 }
 @media (min-width: 768px) {
   .BoardScreen > .screenFgContainer > .foreground > .elComponent {
-    left: 216px;
-    top: 0px;
+    right: 0px;
+    top: 18px;
     width: 135px;
     height: 30px;
   }
@@ -667,8 +667,8 @@
 }
 @media (min-width: 1024px) {
   .BoardScreen > .screenFgContainer > .foreground > .elComponent {
-    left: 216px;
-    top: 0px;
+    right: 0px;
+    top: 18px;
     width: 135px;
     height: 30px;
   }
@@ -676,54 +676,5 @@
     min-height: 26px;
   }
 
-}
-
-.BoardScreen .elIconButton {
-  cursor: pointer;
-  border: 0.0px solid transparent;
-}
-
-.BoardScreen .elIconButton:focus {
-  box-shadow: 0 0 6px rgba(254, 255, 255, 0.2500);
-  outline: none;
-}
-
-
-
-/* Narrowest size for this element's responsive layout */
-  .BoardScreen > .screenFgContainer > .foreground > .elIconButton {
-    line-height: 36px;
-    position: absolute;
-    left: calc(3.8% + -1px);
-    top: 12px;
-    width: 41px;
-    height: 36px;
-  }
-@media (min-width: 568px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elIconButton {
-    line-height: 36px;
-    left: calc(3.8% + -1px);
-    top: 12px;
-    width: 41px;
-    height: 36px;
-  }
-}
-@media (min-width: 768px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elIconButton {
-    line-height: 36px;
-    left: calc(3.8% + -1px);
-    top: 11px;
-    width: 41px;
-    height: 36px;
-  }
-}
-@media (min-width: 1024px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elIconButton {
-    line-height: 36px;
-    left: calc(3.8% + -1px);
-    top: 11px;
-    width: 41px;
-    height: 36px;
-  }
 }
 

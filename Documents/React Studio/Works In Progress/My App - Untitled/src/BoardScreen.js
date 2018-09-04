@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Grid from './Grid';
 import Component1 from './Component1';
-import btn_icon_347788 from './images/btn_icon_347788.png';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -47,18 +46,6 @@ export default class BoardScreen extends Component {
         background: 'rgba(0, 0, 0, 1.000)',
         pointerEvents: 'none',
      };
-    const style_iconButton = {
-        display: 'block',
-        backgroundImage: 'url('+btn_icon_347788+')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '89.562%',
-        backgroundPosition: '50% 0%',
-        color: '(null)',
-        textAlign: 'left',
-        backgroundColor: 'transparent',
-        textTransform: 'uppercase',
-        pointerEvents: 'none',
-     };
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
@@ -96,7 +83,6 @@ export default class BoardScreen extends Component {
             <div className='hasNestedComps elComponent'>
               <Component1 appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
-            <button className='actionFont elIconButton' style={style_iconButton}   />
           </div>
         </div>
       </div>
