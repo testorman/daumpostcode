@@ -9,7 +9,7 @@ import Appbar from 'muicss/lib/react/appbar';
 export default class BoardScreen extends Component {
 
   // Properties used by this component:
-  // appActions, deviceInfo, ds_SlotUserID, ds_SlotUserPhoto
+  // appActions, deviceInfo
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -41,10 +41,6 @@ export default class BoardScreen extends Component {
     let listComps_list = {};
     items_list = items_list.concat(this.props.appActions.getDataSheet('postfirebase').items);
     
-    const style_rectangle = {
-        background: 'rgba(0, 0, 0, 1.000)',
-        pointerEvents: 'none',
-     };
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
@@ -77,7 +73,6 @@ export default class BoardScreen extends Component {
         
         <div className="screenFgContainer">
           <div className="foreground">
-            <div className='elRectangle' style={style_rectangle} />
             <div className='hasNestedComps elComponent'>
               {/* WARNING: element 'Component' in 'Board' has no component set */}
             </div>

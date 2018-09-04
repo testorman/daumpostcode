@@ -547,40 +547,6 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .BoardScreen > .screenFgContainer > .foreground > .elRectangle {
-    position: absolute;
-    left: 279px;
-    top: -398px;
-    width: 176px;
-    height: 152px;
-  }
-@media (min-width: 568px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elRectangle {
-    left: 279px;
-    top: -398px;
-    width: 176px;
-    height: 152px;
-  }
-}
-@media (min-width: 768px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elRectangle {
-    left: 277px;
-    top: -395px;
-    width: 175px;
-    height: 151px;
-  }
-}
-@media (min-width: 1024px) {
-  .BoardScreen > .screenFgContainer > .foreground > .elRectangle {
-    left: 277px;
-    top: -395px;
-    width: 175px;
-    height: 151px;
-  }
-}
-
-
-/* Narrowest size for this element's responsive layout */
   .BoardScreen > .screenFgContainer > .foreground > .elComponent {
     position: fixed;
     right: 0px;
