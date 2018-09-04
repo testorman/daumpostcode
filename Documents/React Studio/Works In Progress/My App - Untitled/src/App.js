@@ -3,7 +3,9 @@ import LocalizedStrings from 'react-localization';
 import './App.css';
 import StartScreen from './StartScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
-import DataSheet_sheet1 from './DataSheet_sheet1.js';
+import DataSheet_postfirebase from './DataSheet_postfirebase.js';
+import firebase from 'firebase';
+import firestore from 'firebase/firestore';
 
 
 export default class App extends Component {
@@ -12,12 +14,31 @@ export default class App extends Component {
 
     this.dataSheets = {};
     this.dataSheets['localizationSheet'] = new DataSheet_localizationSheet('localizationSheet', this.dataSheetDidUpdate);
-    this.dataSheets['sheet1'] = new DataSheet_sheet1('sheet1', this.dataSheetDidUpdate);
+    this.dataSheets['postfirebase'] = new DataSheet_postfirebase('postfirebase', this.dataSheetDidUpdate);
 
     this.dataSlots = {};
     this.dataSlots['ds_activeLang'] = "en";
 
     this.updateLocalizationFromDataSheet(this.dataSheets['localizationSheet']);
+
+
+    // Initialize web service plugin 'firebase-ourboard'
+    firebase.initializeApp({ apiKey: "AIzaSyB8u2zE6BtfdJV97pLALgaIyWd-1_m4OTA",
+        authDomain: "ourboard-a62cd.firebaseapp.com",
+        databaseURL: "https://ourboard-a62cd.firebaseio.com",
+        projectId: "ourboard-a62cd",
+        storageBucket: "ourboard-a62cd.appspot.com",
+        messagingSenderId: "749094167271"
+    });
+    firebase.firestore().settings({timestampsInSnapshots: true});
+    
+    this.serviceOptions_postfirebase = {
+      dataSlots: this.dataSlots,
+      servicePath: "post",
+      query: "",
+    };
+    this.dataSheets['postfirebase'].firebase = firebase;
+    
 
     this.state = {
       currentScreen: 'start',
@@ -44,6 +65,9 @@ export default class App extends Component {
   componentDidMount() {
     this.windowDidResize();
     window.addEventListener('resize', this.windowDidResize);
+
+    this.loadData_firebaseourboard(this.dataSheets['postfirebase'], this.serviceOptions_postfirebase, true);
+    
   }
 
   componentWillUnmount() {
@@ -156,6 +180,84 @@ export default class App extends Component {
       this.locStrings = new LocalizedStrings({en: {}});
     }
     this.locStrings.setLanguage(this.dataSlots['ds_activeLang']);
+  }
+
+  loadData_firebaseourboard = (dataSheet, options, firstLoad) => {
+    // This method was written by data plugin 'Firebase (Cloud Firestore)'.
+   this.setState({loading: true});
+    
+    // clear any placeholder data before load
+    if (firstLoad) {
+      dataSheet.items = [];
+    }
+    
+    const fetchComplete = (err) => {
+      if (err) {
+        // This error handling comes from React Studio
+        // and currently doesn't do anything useful.
+        console.error('** Web service load failed: ', err);
+      } else {
+      }
+      this.setState({loading: false});
+    }
+    
+    const db = firebase.firestore();
+    const collection = db.collection(options.servicePath);
+    const query = dataSheet.expandSlotTemplateString(options.query, this.dataSlots);
+    let queryObj;
+    
+    if (query.length < 1) {
+      queryObj = collection;
+    } else {
+      console.log("loading firebase data for '%s' with query: %s", options.servicePath, query);
+      try {
+        queryObj = eval(`(function(c){ return c.${query}; })(collection)`);
+      } catch (e) {
+        console.log("** error creating firebase query object from '%s': ", query, e)
+        return;
+      }
+    }
+    
+    queryObj.onSnapshot(
+      (querySnapshot) => {
+        let jsonArr = [];
+        
+        if (querySnapshot.docs) {
+          querySnapshot.forEach((doc) => {
+            const data = { ...doc.data(), key: doc.id };
+            jsonArr.push(data);
+          });
+        } else if (querySnapshot.data) {
+          const doc = querySnapshot;
+          const data = { ...doc.data(), key: doc.id };
+          jsonArr.push(data);
+        }    
+            
+        dataSheet.loadFromJson(jsonArr);
+        fetchComplete(null, options);  
+      },
+      (err) => {
+        fetchComplete(err, options);
+      });  
+    
+    
+     /*
+    dbLoadingPromise.get().then((querySnapshot) => {
+        let jsonArr = [];
+    
+        querySnapshot.forEach((doc) => {
+          const data = { ...doc.data(), key: doc.id };
+          jsonArr.push(data);
+        });
+            
+        dataSheet.loadFromJson(jsonArr);
+        fetchComplete(null, options);
+      },
+      (err) => {
+        fetchComplete(err, options);
+      });  
+      */
+    
   }
 
   render() {
