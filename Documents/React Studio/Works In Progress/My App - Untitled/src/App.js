@@ -283,11 +283,17 @@ export default class App extends Component {
         ds_SlotUserEmail: this.dataSlots['ds_SlotUserEmail'],
         ds_SlotUserPhoto: this.dataSlots['ds_SlotUserPhoto'],
       };
+      // A data sheet row was specified as the data source for this screen, so carry those props + 'dataSheetRow'.
+      const dataSheetRow_GoogleLoginScreen = this.dataSheets['postfirebase'].items[0];
+      const screenData_GoogleLoginScreen = {
+        ...dataSheetRow_GoogleLoginScreen,
+        dataSheetRow: dataSheetRow_GoogleLoginScreen,
+      }
       switch (screenId) {
         default:
           return null;
         case 'googlelogin':
-          return (<GoogleLoginScreen {...screenProps} />)
+          return (<GoogleLoginScreen {...screenProps} {...screenData_GoogleLoginScreen} />)
         case 'board':
           return (<BoardScreen {...screenProps} />)
       }
