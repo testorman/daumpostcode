@@ -492,7 +492,7 @@
 /* Narrowest size for this element's responsive layout */
   .BoardScreen > .layoutFlow > .state0_elList {
     position: relative;
-    margin-top: 7px;
+    margin-top: 58px;
     margin-left: 0px;
     margin-right: 0px;
     width: calc(100.0% - 0px);
@@ -505,7 +505,7 @@
 @media (min-width: 568px) {
   .BoardScreen > .layoutFlow > .state0_elList {
     position: relative;
-    margin-top: 7px;
+    margin-top: 58px;
     margin-left: 0px;
     margin-right: 0px;
     width: calc(100.0% - 0px);
@@ -519,7 +519,7 @@
 @media (min-width: 768px) {
   .BoardScreen > .layoutFlow > .state0_elList {
     position: relative;
-    margin-top: 7px;
+    margin-top: 58px;
     margin-left: 0px;
     margin-right: 0px;
     width: calc(100.0% - 0px);
@@ -533,7 +533,7 @@
 @media (min-width: 1024px) {
   .BoardScreen > .layoutFlow > .state0_elList {
     position: relative;
-    margin-top: 7px;
+    margin-top: 58px;
     margin-left: 0px;
     margin-right: 0px;
     width: calc(100.0% - 0px);
