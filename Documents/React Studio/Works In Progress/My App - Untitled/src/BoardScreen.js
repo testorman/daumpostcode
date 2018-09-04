@@ -10,7 +10,7 @@ import Appbar from 'muicss/lib/react/appbar';
 export default class BoardScreen extends Component {
 
   // Properties used by this component:
-  // appActions, deviceInfo
+  // appActions, deviceInfo, ds_SlotUserID, ds_SlotUserPhoto
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -80,7 +80,7 @@ export default class BoardScreen extends Component {
           <div className="foreground">
             <div className='elRectangle' style={style_rectangle} />
             <div className='hasNestedComps elComponent'>
-              <Component1 ds_SlotUserPhoto={""} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+              <Component1 ds_SlotUserPhoto={""} visualStateIndex={this.props.ds_SlotUserID} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           </div>
         </div>
