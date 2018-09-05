@@ -19,10 +19,8 @@ export default class DataSheet_postfirebase extends DataSheetBase {
     this.items.push(item);
     item['imgURL'] = "https://cdn.dribbble.com/users/1094383/screenshots/5094443/comp-1_1.gif";
     item['key'] = "vYUKJPunisRoobE5n6wW";
-    item['userID'] = "";
     item['comment'] = "Hey yo!";
     item['name'] = "Kimtoma";
-    item['created_at'] = "{\"nanoseconds\":0,\"seconds\":1535986800}";
     
     item = {};
     this.items.push(item);
@@ -30,7 +28,6 @@ export default class DataSheet_postfirebase extends DataSheetBase {
     item['key'] = "zxNwGpRNCUaSppdOjiBP";
     item['comment'] = "Wow! wo";
     item['name'] = "Felix";
-    item['created_at'] = "{\"nanoseconds\":0,\"seconds\":1535900400}";
   }
 
   
