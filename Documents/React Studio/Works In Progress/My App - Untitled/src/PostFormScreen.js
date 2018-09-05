@@ -42,9 +42,10 @@ export default class PostFormScreen extends Component {
     let row = this.props.dataSheetRow || {
     };
     row = { ...row, 
-      name: this.state.name,
-      comment: this.state.comment,
       imgURL: this.state.imgURLField,
+      key: this.props.ds_SlotUserID,
+      comment: this.state.comment,
+      name: this.props.ds_SlotUserName,
     };
   
     const transformData = (input) => {
