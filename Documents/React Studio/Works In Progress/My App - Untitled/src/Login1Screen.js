@@ -21,6 +21,8 @@ export default class Login1Screen extends Component {
         if (this._elFirebaseLogin)
           this._elFirebaseLogin.saveCurrentUserDataInApp();
         
+        this.props.appActions.goToScreen('board');
+        
       }
     }, 50);
   }

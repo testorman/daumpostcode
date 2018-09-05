@@ -48,6 +48,8 @@ export default class FirebaseLogin extends Component {
   }
 
   loginSuccess() {
+    this.props.appActions.goToScreen('board');
+    
 
   }
   
