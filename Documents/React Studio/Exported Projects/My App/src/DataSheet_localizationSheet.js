@@ -57,6 +57,11 @@ export default class DataSheet_localizationSheet extends DataSheetBase {
     this.items.push(item);
     item['key'] = "postform_button_855021";
     item['en'] = "Post";
+    
+    item = {};
+    this.items.push(item);
+    item['key'] = "grid_button_973409";
+    item['en'] = "Delete";
   }
 
   getStringsByLanguage = () => {

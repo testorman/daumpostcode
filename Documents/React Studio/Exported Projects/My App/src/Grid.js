@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import img_elImage from './images/Grid_elImage_519339.jpg';
 
+// UI framework component imports
+import Button from 'muicss/lib/react/button';
+
 
 export default class Grid extends Component {
 
   // Properties used by this component:
-  // imgURL, comment, name
+  // imgURL, comment, name, key
 
   constructor(props) {
     super(props);
@@ -21,6 +24,12 @@ export default class Grid extends Component {
     };
   }
 
+  onClick_elButton = (ev) => {
+    alert("Delete")
+  
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -58,8 +67,15 @@ export default class Grid extends Component {
         color: 'rgba(0, 0, 0, 0.8500)',
         textAlign: 'left',
      };
+    const value_text3 = this.props.key;
+    
     const style_text3_outer = {
         pointerEvents: 'none',
+     };
+    const style_button = {
+        display: 'block',
+        textAlign: 'center',
+        cursor: 'pointer',
      };
     
     return (
@@ -86,11 +102,16 @@ export default class Grid extends Component {
           
           <div className='baseFont elText3' style={style_text3_outer}>
             <div style={style_text3}>
-              <div>{this.state.text3}</div>
+              <div>{value_text3 !== undefined ? value_text3 : (<span className="propValueMissing">{this.state.text3}</span>)}</div>
             </div>
           
           </div>
           
+        </div>
+        <div className="foreground">
+          <Button className='actionFont elButton' style={style_button}  color="accent" onClick={this.onClick_elButton} >
+            {this.props.locStrings.grid_button_973409}
+          </Button>
         </div>
       </div>
     )
