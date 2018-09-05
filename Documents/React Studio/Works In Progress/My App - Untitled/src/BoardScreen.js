@@ -12,6 +12,13 @@ export default class BoardScreen extends Component {
   // Properties used by this component:
   // appActions, deviceInfo, ds_SlotUserID, ds_SlotUserPhoto
 
+  onClick_elText = (ev) => {
+    // Go to screen 'postForm'
+    this.props.appActions.goToScreen('postform', { transitionId: 'fadeIn' });
+  
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -52,6 +59,13 @@ export default class BoardScreen extends Component {
       return 0;
       }
     }
+    const style_text = {
+        fontSize: 10.8,
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
+        color: 'white',
+        textAlign: 'left',
+        cursor: 'pointer',
+     };
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
@@ -86,6 +100,9 @@ export default class BoardScreen extends Component {
           <div className="foreground">
             <div className='hasNestedComps elUserInfo'>
               <UserInfo ds_SlotUserPhoto={this.props.ds_SlotUserPhoto || ""} visualStateIndex={transformStateValue_userInfo(this.props.ds_SlotUserID)} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
+            <div className='elText' style={style_text} onClick={this.onClick_elText} >
+              <div>{this.props.locStrings.board_text_1037288}</div>
             </div>
           </div>
         </div>
