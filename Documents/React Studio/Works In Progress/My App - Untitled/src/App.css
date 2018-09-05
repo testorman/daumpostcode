@@ -492,48 +492,48 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .PostFormScreen > .layoutFlow > .elText {
+  .PostFormScreen > .layoutFlow > .elName {
     position: relative;
     margin-top: 105px;
     width: 238px;
     margin-left: 26px;
   }
-  .PostFormScreen > .layoutFlow > .elText > * { 
+  .PostFormScreen > .layoutFlow > .elName > * { 
   width: 238px;
   }
   
 @media (min-width: 568px) {
-  .PostFormScreen > .layoutFlow > .elText {
+  .PostFormScreen > .layoutFlow > .elName {
     position: relative;
     margin-top: 105px;
     width: 238px;
     margin-left: 26px;
   }
-  .PostFormScreen > .layoutFlow > .elText > * { 
+  .PostFormScreen > .layoutFlow > .elName > * { 
   width: 238px;
   }
   
 }
 @media (min-width: 768px) {
-  .PostFormScreen > .layoutFlow > .elText {
+  .PostFormScreen > .layoutFlow > .elName {
     position: relative;
     margin-top: 104px;
     width: 236px;
     margin-left: 26px;
   }
-  .PostFormScreen > .layoutFlow > .elText > * { 
+  .PostFormScreen > .layoutFlow > .elName > * { 
   width: 236px;
   }
   
 }
 @media (min-width: 1024px) {
-  .PostFormScreen > .layoutFlow > .elText {
+  .PostFormScreen > .layoutFlow > .elName {
     position: relative;
     margin-top: 104px;
     width: 236px;
     margin-left: 26px;
   }
-  .PostFormScreen > .layoutFlow > .elText > * { 
+  .PostFormScreen > .layoutFlow > .elName > * { 
   width: 236px;
   }
   
@@ -541,51 +541,51 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .PostFormScreen > .layoutFlow > .elField {
+  .PostFormScreen > .layoutFlow > .elImgURLField {
     position: relative;
     margin-top: 38px;
     width: 226px;
     margin-left: 33px;
   }
-  .PostFormScreen > .layoutFlow > .elField > * { 
+  .PostFormScreen > .layoutFlow > .elImgURLField > * { 
   width: 226px;
   height: 34px;
   }
   
 @media (min-width: 568px) {
-  .PostFormScreen > .layoutFlow > .elField {
+  .PostFormScreen > .layoutFlow > .elImgURLField {
     position: relative;
     margin-top: 38px;
     width: 226px;
     margin-left: 33px;
   }
-  .PostFormScreen > .layoutFlow > .elField > * { 
+  .PostFormScreen > .layoutFlow > .elImgURLField > * { 
   width: 226px;
   height: 34px;
   }
   
 }
 @media (min-width: 768px) {
-  .PostFormScreen > .layoutFlow > .elField {
+  .PostFormScreen > .layoutFlow > .elImgURLField {
     position: relative;
     margin-top: 38px;
     width: 225px;
     margin-left: 32px;
   }
-  .PostFormScreen > .layoutFlow > .elField > * { 
+  .PostFormScreen > .layoutFlow > .elImgURLField > * { 
   width: 225px;
   height: 34px;
   }
   
 }
 @media (min-width: 1024px) {
-  .PostFormScreen > .layoutFlow > .elField {
+  .PostFormScreen > .layoutFlow > .elImgURLField {
     position: relative;
     margin-top: 38px;
     width: 225px;
     margin-left: 32px;
   }
-  .PostFormScreen > .layoutFlow > .elField > * { 
+  .PostFormScreen > .layoutFlow > .elImgURLField > * { 
   width: 225px;
   height: 34px;
   }
@@ -594,53 +594,53 @@
 
 
 /* Narrowest size for this element's responsive layout */
-  .PostFormScreen > .layoutFlow > .elField2 {
+  .PostFormScreen > .layoutFlow > .elComment {
     position: relative;
     margin-top: 37px;
     width: 226px;
     margin-left: 34px;
   }
-  .PostFormScreen > .layoutFlow > .elField2 > * { 
+  .PostFormScreen > .layoutFlow > .elComment > * { 
   width: 226px;
-  height: 34px;
+  height: 92px;
   }
   
 @media (min-width: 568px) {
-  .PostFormScreen > .layoutFlow > .elField2 {
+  .PostFormScreen > .layoutFlow > .elComment {
     position: relative;
     margin-top: 37px;
     width: 226px;
     margin-left: 34px;
   }
-  .PostFormScreen > .layoutFlow > .elField2 > * { 
+  .PostFormScreen > .layoutFlow > .elComment > * { 
   width: 226px;
-  height: 34px;
+  height: 92px;
   }
   
 }
 @media (min-width: 768px) {
-  .PostFormScreen > .layoutFlow > .elField2 {
+  .PostFormScreen > .layoutFlow > .elComment {
     position: relative;
     margin-top: 37px;
     width: 225px;
     margin-left: 34px;
   }
-  .PostFormScreen > .layoutFlow > .elField2 > * { 
+  .PostFormScreen > .layoutFlow > .elComment > * { 
   width: 225px;
-  height: 34px;
+  height: 91px;
   }
   
 }
 @media (min-width: 1024px) {
-  .PostFormScreen > .layoutFlow > .elField2 {
+  .PostFormScreen > .layoutFlow > .elComment {
     position: relative;
     margin-top: 37px;
     width: 225px;
     margin-left: 34px;
   }
-  .PostFormScreen > .layoutFlow > .elField2 > * { 
+  .PostFormScreen > .layoutFlow > .elComment > * { 
   width: 225px;
-  height: 34px;
+  height: 91px;
   }
   
 }

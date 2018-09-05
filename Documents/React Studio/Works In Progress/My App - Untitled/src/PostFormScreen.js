@@ -14,18 +14,55 @@ export default class PostFormScreen extends Component {
     super(props);
     
     this.state = {
-      field: '',
-      field2: '',
+      imgURLField: '',
+      comment: '',
     };
   }
 
-  textInputChanged_field = (event) => {
-    this.setState({field: event.target.value});
+  textInputChanged_imgURLField = (event) => {
+    this.setState({imgURLField: event.target.value});
   }
   
-  textInputChanged_field2 = (event) => {
-    this.setState({field2: event.target.value});
+  textInputChanged_comment = (event) => {
+    this.setState({comment: event.target.value});
   }
+  
+  onClick_elButton = (ev) => {
+    this.sendData_button_to_postfirebase();
+  
+    // Go to screen 'Board'
+    this.props.appActions.goToScreen('board', { transitionId: 'fadeIn' });
+  
+  }
+  
+  
+  sendData_button_to_postfirebase = () => {
+    const dataSheet = this.props.appActions.getDataSheet('postfirebase');
+  
+    let row = this.props.dataSheetRow || {
+    };
+    row = { ...row, 
+      name: this.state.name,
+      comment: this.state.comment,
+      imgURL: this.state.imgURLField,
+    };
+  
+    const transformData = (input) => {
+        // This function modifies the value saved to the data sheet.
+      // There is a variable named 'input' that provides the input values:
+      // it's a JavaScript object with properties that contain all the
+      // values collected from the UI.
+      return input.created_at = Date.now();
+    }
+    row = transformData(row);
+  
+    if (this.props.dataSheetId === dataSheet.id) {
+      this.props.appActions.updateInDataSheet('postfirebase', row);
+    } else {
+      this.props.appActions.addToDataSheet('postfirebase', row);
+    }
+  }
+  
   
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -48,22 +85,22 @@ export default class PostFormScreen extends Component {
         backgroundColor: 'white',
         pointerEvents: 'none',
      };
-    const style_text = {
+    const style_name = {
         color: 'rgba(0, 0, 0, 0.8500)',
         textAlign: 'left',
      };
-    const value_text = this.props.ds_SlotUserName;
+    const value_name = this.props.ds_SlotUserName;
     
-    const style_text_outer = {
+    const style_name_outer = {
         pointerEvents: 'none',
      };
-    const style_field = {
+    const style_imgURLField = {
         display: 'block',
         backgroundColor: 'white',
         paddingLeft: '1rem',
         boxSizing: 'border-box', // ensures padding won't expand element's outer size
      };
-    const style_field2 = {
+    const style_comment = {
         display: 'block',
         backgroundColor: 'white',
         paddingLeft: '1rem',
@@ -74,7 +111,7 @@ export default class PostFormScreen extends Component {
         textAlign: 'center',
      };
     const style_button_outer = {
-        pointerEvents: 'none',
+        cursor: 'pointer',
      };
     
     return (
@@ -87,25 +124,25 @@ export default class PostFormScreen extends Component {
           
         </div>
         <div className="layoutFlow" style={layoutFlowStyle}>
-          <div className='baseFont elText' style={style_text_outer}>
-            <div style={style_text}>
-              <div>{value_text !== undefined ? value_text : (<span className="propValueMissing">{this.props.locStrings.postform_text_301963}</span>)}</div>
+          <div className='baseFont elName' style={style_name_outer}>
+            <div style={style_name}>
+              <div>{value_name !== undefined ? value_name : (<span className="propValueMissing">{this.props.locStrings.postform_text_301963}</span>)}</div>
             </div>
           
           </div>
           
-          <div className='baseFont elField'>
-            <input style={style_field} type="text" placeholder={this.props.locStrings.postform_field_473348} onChange={this.textInputChanged_field} defaultValue={this.state.field}  />
+          <div className='baseFont elImgURLField'>
+            <input style={style_imgURLField} type="text" placeholder={this.props.locStrings.postform_field_473348} onChange={this.textInputChanged_imgURLField} defaultValue={this.state.imgURLField}  />
           
           </div>
           
-          <div className='baseFont elField2'>
-            <input style={style_field2} type="text" placeholder={this.props.locStrings.postform_field2_793536} onChange={this.textInputChanged_field2} defaultValue={this.state.field2}  />
+          <div className='baseFont elComment'>
+            <input style={style_comment} type="text" placeholder={this.props.locStrings.postform_field2_793536} onChange={this.textInputChanged_comment} defaultValue={this.state.comment}  />
           
           </div>
           
           <div className='actionFont elButton' style={style_button_outer}>
-            <Button style={style_button}  color="accent" >
+            <Button style={style_button}  color="accent" onClick={this.onClick_elButton} >
               {this.props.locStrings.postform_button_855021}
             </Button>
           
