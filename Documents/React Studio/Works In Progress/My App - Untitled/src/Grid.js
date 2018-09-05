@@ -9,7 +9,7 @@ import Button from 'muicss/lib/react/button';
 export default class Grid extends Component {
 
   // Properties used by this component:
-  // imgURL, comment, name
+  // imgURL, comment, name, key
 
   constructor(props) {
     super(props);
@@ -25,12 +25,7 @@ export default class Grid extends Component {
   }
 
   onClick_elButton = (ev) => {
-    var jobskill_query = db.collection('post').where('job_id','==',post.job_id);
-    jobskill_query.get().then(function(querySnapshot) {
-      querySnapshot.forEach(function(doc) {
-        doc.ref.delete();
-      });
-    });
+    alert("Delete")
   
   }
   
@@ -72,6 +67,8 @@ export default class Grid extends Component {
         color: 'rgba(0, 0, 0, 0.8500)',
         textAlign: 'left',
      };
+    const value_text3 = this.props.key;
+    
     const style_text3_outer = {
         pointerEvents: 'none',
      };
@@ -105,7 +102,7 @@ export default class Grid extends Component {
           
           <div className='baseFont elText3' style={style_text3_outer}>
             <div style={style_text3}>
-              <div>{this.state.text3}</div>
+              <div>{value_text3 !== undefined ? value_text3 : (<span className="propValueMissing">{this.state.text3}</span>)}</div>
             </div>
           
           </div>
