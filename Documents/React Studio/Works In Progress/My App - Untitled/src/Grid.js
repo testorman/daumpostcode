@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import img_elImage from './images/Grid_elImage_519339.jpg';
 
+// UI framework component imports
+import Button from 'muicss/lib/react/button';
+
 
 export default class Grid extends Component {
 
@@ -21,6 +24,17 @@ export default class Grid extends Component {
     };
   }
 
+  onClick_elButton = (ev) => {
+    var jobskill_query = db.collection('post').where('job_id','==',post.job_id);
+    jobskill_query.get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
+        doc.ref.delete();
+      });
+    });
+  
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -61,6 +75,11 @@ export default class Grid extends Component {
     const style_text3_outer = {
         pointerEvents: 'none',
      };
+    const style_button = {
+        display: 'block',
+        textAlign: 'center',
+        cursor: 'pointer',
+     };
     
     return (
       <div className="Grid" style={baseStyle}>
@@ -91,6 +110,11 @@ export default class Grid extends Component {
           
           </div>
           
+        </div>
+        <div className="foreground">
+          <Button className='actionFont elButton' style={style_button}  color="accent" onClick={this.onClick_elButton} >
+            {this.props.locStrings.grid_button_973409}
+          </Button>
         </div>
       </div>
     )
