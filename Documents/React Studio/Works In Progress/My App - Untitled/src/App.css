@@ -405,11 +405,11 @@
 
 /* This component has a fixed-size layout */
   .UserInfo {
-    min-height: 26px;
+    min-height: 28px;
     width: 100%; /* This component was designed using a width of 128px */
   }
   .UserInfo > .background > .containerMinHeight {
-    min-height: 26px;
+    min-height: 28px;
   }
 
 
@@ -423,11 +423,11 @@
 
 /* This component has a fixed-size layout */
   .UserInfo {
-    min-height: 26px;
+    min-height: 28px;
     width: 100%; /* This component was designed using a width of 128px */
   }
   .UserInfo > .background > .containerMinHeight {
-    min-height: 26px;
+    min-height: 28px;
   }
 
 

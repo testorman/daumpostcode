@@ -85,7 +85,7 @@ export default class BoardScreen extends Component {
         <div className="screenFgContainer">
           <div className="foreground">
             <div className='hasNestedComps elUserInfo'>
-              <UserInfo ds_SlotUserPhoto={""} visualStateIndex={transformStateValue_userInfo(this.props.ds_SlotUserID)} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+              <UserInfo ds_SlotUserPhoto={this.props.ds_SlotUserPhoto || ""} visualStateIndex={transformStateValue_userInfo(this.props.ds_SlotUserID)} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           </div>
         </div>

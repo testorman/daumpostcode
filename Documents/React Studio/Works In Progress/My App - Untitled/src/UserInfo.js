@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import img_state1_elImage from './images/Grid_elImage_519339.jpg';
+import img_state1_elImage from './images/UserInfo_state1_elImage_590982.jpg';
 
 
 export default class UserInfo extends Component {
