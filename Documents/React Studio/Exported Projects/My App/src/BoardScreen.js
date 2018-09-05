@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Grid from './Grid';
-import Component1 from './Component1';
+import UserInfo from './UserInfo';
 
 // UI framework component imports
 import Appbar from 'muicss/lib/react/appbar';
@@ -12,6 +12,13 @@ export default class BoardScreen extends Component {
   // Properties used by this component:
   // appActions, deviceInfo, ds_SlotUserID, ds_SlotUserPhoto
 
+  onClick_elText = (ev) => {
+    // Go to screen 'postForm'
+    this.props.appActions.goToScreen('postform', { transitionId: 'fadeIn' });
+  
+  }
+  
+  
   render() {
     // eslint-disable-next-line no-unused-vars
     let baseStyle = {};
@@ -42,9 +49,22 @@ export default class BoardScreen extends Component {
     let listComps_list = {};
     items_list = items_list.concat(this.props.appActions.getDataSheet('postfirebase').items);
     
-    const style_rectangle = {
-        background: 'rgba(0, 0, 0, 1.000)',
-        pointerEvents: 'none',
+    let transformStateValue_userInfo = (input) => {
+      // This function modifies the value for property 'componentStateId'.
+      // There is a variable named 'input' that provides the property value.
+      if (input!=""){
+      return 1;
+      }
+      else {
+      return 0;
+      }
+    }
+    const style_text = {
+        fontSize: 10.8,
+        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif',
+        color: 'white',
+        textAlign: 'left',
+        cursor: 'pointer',
      };
     
     return (
@@ -78,9 +98,11 @@ export default class BoardScreen extends Component {
         
         <div className="screenFgContainer">
           <div className="foreground">
-            <div className='elRectangle' style={style_rectangle} />
-            <div className='hasNestedComps elComponent'>
-              <Component1 ds_SlotUserPhoto={""} visualStateIndex={this.props.ds_SlotUserID} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            <div className='hasNestedComps elUserInfo'>
+              <UserInfo ds_SlotUserPhoto={this.props.ds_SlotUserPhoto || ""} visualStateIndex={transformStateValue_userInfo(this.props.ds_SlotUserID)} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+            </div>
+            <div className='elText' style={style_text} onClick={this.onClick_elText} >
+              <div>{this.props.locStrings.board_text_1037288}</div>
             </div>
           </div>
         </div>

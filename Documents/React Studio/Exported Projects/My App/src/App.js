@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LocalizedStrings from 'react-localization';
 import './App.css';
 import Login1Screen from './Login1Screen.js';
+import PostFormScreen from './PostFormScreen.js';
 import BoardScreen from './BoardScreen.js';
 import DataSheet_localizationSheet from './DataSheet_localizationSheet.js';
 import DataSheet_postfirebase from './DataSheet_postfirebase.js';
@@ -288,6 +289,8 @@ export default class App extends Component {
           return null;
         case 'login1':
           return (<Login1Screen {...screenProps} />)
+        case 'postform':
+          return (<PostFormScreen {...screenProps} />)
         case 'board':
           return (<BoardScreen {...screenProps} />)
       }

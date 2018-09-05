@@ -17,19 +17,17 @@ export default class DataSheet_postfirebase extends DataSheetBase {
     
     item = {};
     this.items.push(item);
-    item['imgURL'] = "https://wallpaperbrowse.com/media/images/303836.jpg";
+    item['imgURL'] = "https://cdn.dribbble.com/users/1094383/screenshots/5094443/comp-1_1.gif";
     item['key'] = "vYUKJPunisRoobE5n6wW";
     item['comment'] = "Hey yo!";
     item['name'] = "Kimtoma";
-    item['created_at'] = "{\"nanoseconds\":0,\"seconds\":1535986800}";
     
     item = {};
     this.items.push(item);
-    item['imgURL'] = "https://wallpaperbrowse.com/media/images/b807c2282ab0a491bd5c5c1051c6d312_rP0kQjJ.jpg";
+    item['imgURL'] = "https://cdn.dribbble.com/users/391175/screenshots/5088455/comp_2.gif";
     item['key'] = "zxNwGpRNCUaSppdOjiBP";
     item['comment'] = "Wow! wo";
     item['name'] = "Felix";
-    item['created_at'] = "{\"nanoseconds\":0,\"seconds\":1535900400}";
   }
 
   
