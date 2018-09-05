@@ -52,7 +52,7 @@ export default class PostFormScreen extends Component {
       // There is a variable named 'input' that provides the input values:
       // it's a JavaScript object with properties that contain all the
       // values collected from the UI.
-      return input.created_at = Date.now();
+      return input;
     }
     row = transformData(row);
   
