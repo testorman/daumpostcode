@@ -10,7 +10,7 @@ import Appbar from 'muicss/lib/react/appbar';
 export default class BoardScreen extends Component {
 
   // Properties used by this component:
-  // appActions, deviceInfo
+  // appActions, deviceInfo, ds_SlotUserID, ds_SlotUserPhoto
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -42,6 +42,16 @@ export default class BoardScreen extends Component {
     let listComps_list = {};
     items_list = items_list.concat(this.props.appActions.getDataSheet('postfirebase').items);
     
+    let transformStateValue_userInfo = (input) => {
+      // This function modifies the value for property 'componentStateId'.
+      // There is a variable named 'input' that provides the property value.
+      if (input!=""){
+      return 1;
+      }
+      else {
+      return 0;
+      }
+    }
     
     return (
       <div className="AppScreen BoardScreen" style={baseStyle}>
@@ -75,7 +85,7 @@ export default class BoardScreen extends Component {
         <div className="screenFgContainer">
           <div className="foreground">
             <div className='hasNestedComps elUserInfo'>
-              <UserInfo ds_SlotUserPhoto={""} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
+              <UserInfo ds_SlotUserPhoto={""} visualStateIndex={transformStateValue_userInfo(this.props.ds_SlotUserID)} appActions={this.props.appActions} deviceInfo={this.props.deviceInfo} locStrings={this.props.locStrings} />
             </div>
           </div>
         </div>
